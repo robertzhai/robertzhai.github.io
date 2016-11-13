@@ -1,2 +1,4 @@
 src
 node_modules
+build
+rsync.sh
