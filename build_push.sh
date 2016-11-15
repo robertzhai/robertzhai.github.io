@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-gulp
+#gulp
 rsync -avr build/* .
 git add *
 git ci -am 'update this repo'
