@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://robertzhai.github.io//feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="https://robertzhai.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://robertzhai.github.io//" rel="alternate" type="text/html" /><updated>2016-11-15T22:16:39+08:00</updated><id>https://robertzhai.github.io///</id><title type="html">robertzhai的个人博客</title><subtitle>我个人网名robertzhai,从事IT行业。目前就职百度，做后端研发相关的项目，资深后端，业余前端和设计，欢迎和大家学习交流心得。这个博客主要是业余时间来更新，敬请期待。
+</subtitle><entry><title type="html">欢迎来的我的博客robertzhai.github.io</title><link href="https://robertzhai.github.io//welcome/2016/11/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="欢迎来的我的博客robertzhai.github.io" /><published>2016-11-14T18:00:00+08:00</published><updated>2016-11-14T18:00:00+08:00</updated><id>https://robertzhai.github.io//welcome/2016/11/14/welcome-to-jekyll</id><content type="html" xml:base="https://robertzhai.github.io//welcome/2016/11/14/welcome-to-jekyll.html">&lt;blockquote&gt;
+  &lt;p&gt;我的博客迁移到github上了，网址：&lt;a href=&quot;https://robertzhai.github.io/&quot;&gt;robertzhai.github.io&lt;/a&gt;,以前的博客是
+&lt;a href=&quot;http://blog.csdn.net/robert198837&quot;&gt;blog.csdn.net/robert198837&lt;/a&gt;。希望能和大家互相学习和交流。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这个博客是基于&lt;a href=&quot;https://jekyllrb.com/docs/quickstart/&quot;&gt;jekyll&lt;/a&gt;和&lt;a href=&quot;https://pages.github.com/&quot;&gt;github pages&lt;/a&gt;,主题基于
+&lt;a href=&quot;https://github.com/jekyll/minima&quot;&gt;minima&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;</content><summary type="html">我的博客迁移到github上了，网址：robertzhai.github.io,以前的博客是
+blog.csdn.net/robert198837。希望能和大家互相学习和交流。</summary></entry></feed>
