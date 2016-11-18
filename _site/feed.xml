@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://robertzhai.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="https://robertzhai.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://robertzhai.github.io/" rel="alternate" type="text/html" /><updated>2016-11-18T10:34:14+08:00</updated><id>https://robertzhai.github.io//</id><title type="html">robertzhai的个人博客</title><subtitle>我个人网名robertzhai,从事IT行业。资深后端，业余前端和设计，欢迎和大家学习交流心得。
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://robertzhai.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator><link href="https://robertzhai.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://robertzhai.github.io/" rel="alternate" type="text/html" /><updated>2016-11-18T10:37:27+08:00</updated><id>https://robertzhai.github.io//</id><title type="html">robertzhai的个人博客</title><subtitle>我个人网名robertzhai,从事IT行业。资深后端，业余前端和设计，欢迎和大家学习交流心得。
 </subtitle><entry><title type="html">读书- « CSS设计指南 »</title><link href="https://robertzhai.github.io/reading/2016/11/18/reading-stylin-with-css.html" rel="alternate" type="text/html" title="读书- &lt;&lt; CSS设计指南 &gt;&gt;" /><published>2016-11-18T09:00:00+08:00</published><updated>2016-11-18T09:00:00+08:00</updated><id>https://robertzhai.github.io/reading/2016/11/18/reading-stylin-with-css</id><content type="html" xml:base="https://robertzhai.github.io/reading/2016/11/18/reading-stylin-with-css.html">&lt;h1 id=&quot;css-&quot;&gt;« CSS设计指南 »&lt;/h1&gt;
 &lt;blockquote&gt;
   &lt;p&gt;作者个人网站&lt;a href=&quot;http://www.stylinwithcss.com/&quot;&gt;http://www.stylinwithcss.com/&lt;/a&gt;
@@ -7,12 +7,20 @@
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;section&quot;&gt;扩展阅读&lt;/h1&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;1.&lt;a href=&quot;http://webdesignernotebook.com/css/how-to-use-modernizr/&quot;&gt;http://webdesignernotebook.com/css/how-to-use-modernizr/&lt;/a&gt;
-2.&lt;a href=&quot;http://caunion.me/study-notes-of-kramdown/&quot;&gt;http://caunion.me/study-notes-of-kramdown/&lt;/a&gt;
-3.&lt;a href=&quot;https://stuffandnonsense.co.uk/about&quot;&gt;https://stuffandnonsense.co.uk/about&lt;/a&gt;
-4.&lt;a href=&quot;http://www.lukew.com/ff/entry.asp?933&quot;&gt;http://www.lukew.com/ff/entry.asp?933&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</content><summary type="html">« CSS设计指南 »
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://webdesignernotebook.com/css/how-to-use-modernizr/&quot;&gt;http://webdesignernotebook.com/css/how-to-use-modernizr/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://caunion.me/study-notes-of-kramdown/&quot;&gt;http://caunion.me/study-notes-of-kramdown/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://stuffandnonsense.co.uk/about&quot;&gt;https://stuffandnonsense.co.uk/about&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.lukew.com/ff/entry.asp?933&quot;&gt;http://www.lukew.com/ff/entry.asp?933&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><summary type="html">« CSS设计指南 »
 
   作者个人网站http://www.stylinwithcss.com/
 图灵翻译的书，讲解html5和css3界面布局，还有实例讲解，内容比较丰富，对响应式设计也有很独到的介绍。

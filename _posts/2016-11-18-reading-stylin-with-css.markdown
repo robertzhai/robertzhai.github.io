@@ -11,7 +11,10 @@ categories: reading
 读后对css有了进一步认识。下载地址：[github下载](https://github.com/robertzhai/ebooks/blob/master/h5/CSS%E8%AE%BE%E8%AE%A1%E6%8C%87%E5%8D%97.pdf)
 
 # 扩展阅读
->1.[http://webdesignernotebook.com/css/how-to-use-modernizr/](http://webdesignernotebook.com/css/how-to-use-modernizr/)
->2.[http://caunion.me/study-notes-of-kramdown/](http://caunion.me/study-notes-of-kramdown/)
->3.[https://stuffandnonsense.co.uk/about](https://stuffandnonsense.co.uk/about)
->4.[http://www.lukew.com/ff/entry.asp?933](http://www.lukew.com/ff/entry.asp?933)
+1. [http://webdesignernotebook.com/css/how-to-use-modernizr/](http://webdesignernotebook.com/css/how-to-use-modernizr/)
+
+2. [http://caunion.me/study-notes-of-kramdown/](http://caunion.me/study-notes-of-kramdown/)
+
+3. [https://stuffandnonsense.co.uk/about](https://stuffandnonsense.co.uk/about)
+
+4. [http://www.lukew.com/ff/entry.asp?933](http://www.lukew.com/ff/entry.asp?933)
