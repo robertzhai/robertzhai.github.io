@@ -21,4 +21,8 @@ categories: reading
 
 3. [https://stuffandnonsense.co.uk/about](https://stuffandnonsense.co.uk/about)
 
-4. [http://www.lukew.com/ff/entry.asp?933](http://www.lukew.com/ff/entry.asp?933)
+4. [http://www.lukew.com/ff/entry.asp?933](http://www.lukew.com/ff/entry.asp?933)  
+
+5. [http://www.lukew.com/resources/web_form_design.asp](http://www.lukew.com/resources/web_form_design.asp)
+
+6. [https://www.html5rocks.com/en/tutorials/forms/html5forms/](https://www.html5rocks.com/en/tutorials/forms/html5forms/)
