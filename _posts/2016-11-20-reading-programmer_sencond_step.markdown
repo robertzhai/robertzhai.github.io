@@ -16,3 +16,6 @@ categories: reading
 # 封面
 >![stylin_with_css]({{ site.url }}/assets/reading/programmer_sencond_step.png)
 
+# 扩展阅读  
+>1. [《致加西亚的信》](https://github.com/robertzhai/ebooks/blob/master/management/%E3%80%8A%E8%87%B4%E5%8A%A0%E8%A5%BF%E4%BA%9A%E7%9A%84%E4%BF%A1%E3%80%8B%E4%BD%9C%E8%80%85_-%E9%98%BF%E5%B0%94%E4%BC%AF%E7%89%B9%E2%80%A2%E5%93%88%E4%BC%AF%E5%BE%B7.mobi) 
+
