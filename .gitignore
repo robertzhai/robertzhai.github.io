@@ -2,3 +2,5 @@ src
 node_modules
 build
 build_push.sh
+.idea
+.sass-cache
