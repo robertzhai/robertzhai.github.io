@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "使用gulp来构建你的web和h5项目"
-date:   2016-11-20 12:0:0 +0800
+date:   2016-11-22 8:0:0 +0800
 categories: reading
 ---
 
 # gulp
-> 对项目的静态资源html、js、css、image压缩和打包的工具，可以对应替换css、js、image的路径。
+> 对项目的静态资源html、js、css、image压缩和打包的工具，可以对应替换html中css、js、image，css中image的路径。
 
 # 主要依赖 
 {% highlight ruby %}
