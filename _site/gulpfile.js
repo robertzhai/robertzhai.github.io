@@ -13,12 +13,7 @@ var gulp = require('gulp');
 var del = require('del');
 gulp.task('clean', function (cb) {
   del([
-    'build/js',
-    'build/css',
-    'build/img',
-    // 'build/mobile/**/*',
-    // 我们不希望删掉这个文件，所以我们取反这个匹配模式
-    // '!dist/mobile/deploy.json'
+    'build/*',
   ], cb);
 });
 
@@ -43,22 +38,26 @@ gulp.task('html' , function(){
 
 gulp.task('scripts', ['html'], function() {
 // gulp.task('scripts', function() {
-    return gulp.src('src/js/**/*')
+    return gulp.src('src/**/*.js')
       // .pipe(concat('main.js'))
       // .pipe(rename({suffix:  '.' + date + '.min'}))
         .pipe(uglify())
-        .pipe( gulpMD5(32, 'build/*.html') )
-      .pipe(gulp.dest('build/js'));
+        // .pipe( gulpMD5(32, 'build/**/*.html') )
+      .pipe(gulp.dest('build/'));
 });
-// images 
+// gulp.task('default', ['clean', 'html']);
+gulp.task('default', ['clean', 'html']);
+// images
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
-gulp.task('images', function() {
-  return gulp.src('src/img/**/*')
-    .pipe(rename({suffix:  '.' + date}))
-    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('build/img'));
+gulp.task('images', ['html'], function() {
+  return gulp.src('src/**/*.png')
+    // .pipe(rename({suffix:  '.' + date}))
+    .pipe(imagemin({progressive: true }))
+       .pipe( gulpMD5(32, 'build/**/*.html') )
+    .pipe(gulp.dest('build/'));
 });
+// gulp.task('default', ['clean', 'html', 'images']);
 
 // css
 // 获取 minify-css 模块（用于压缩 CSS）
@@ -67,15 +66,14 @@ var minifyCSS = require('gulp-minify-css')
 // 在命令行使用 gulp css 启动此任务
 gulp.task('css', ['html'], function () {
     // 1. 找到文件
-    return gulp.src('src/css/**/*')
-    // .pipe(rename({suffix:  '.' + date + '.min'}))
+    return gulp.src('src/**/*.css')
     // 2. 压缩文件
       .pipe(minifyCSS())
     // 3. 另存为压缩文件
-        .pipe( gulpMD5(32, 'build/*.html') )
-        .pipe(gulp.dest('build/css'))
+        .pipe( gulpMD5(32, 'build/**/*.html') )
+        .pipe(gulp.dest('build'))
 })
-
+gulp.task('default', ['clean', 'images', 'css']);
 
 //watch
 gulp.task('watch', function() {
@@ -91,7 +89,7 @@ gulp.task('watch', function() {
 // Default Task
 // gulp.task('default', ['clean']);
 // gulp.task('default', ['clean', 'scripts', 'images', 'css', 'html', 'watch']);
-gulp.task('default', ['clean', 'scripts', 'images', 'css']);
+// gulp.task('default', ['clean', 'scripts', 'images', 'css']);
 
 
 

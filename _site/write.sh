@@ -1,1 +1,1 @@
-jekyll s -w
+jekyll s -w --incremental
