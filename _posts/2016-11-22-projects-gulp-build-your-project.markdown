@@ -2,7 +2,7 @@
 layout: post
 title:  "使用gulp来构建你的web和h5项目"
 date:   2016-11-22 8:0:0 +0800
-categories: reading
+categories: projects
 ---
 
 # gulp

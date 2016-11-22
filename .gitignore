@@ -6,3 +6,5 @@ build_push.sh
 .sass-cache
 _posts1121
 new.sh
+.jekyll-metadata
+_posts
