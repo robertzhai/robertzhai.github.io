@@ -24,3 +24,6 @@ Stay Hungry, Stay Foolish 。
 # 微博
 >[http://weibo.com/319688805](http://weibo.com/319688805)
 
+# 简书  
+>[http://www.jianshu.com/p/1f471d8d7921](http://www.jianshu.com/p/1f471d8d7921)
+
