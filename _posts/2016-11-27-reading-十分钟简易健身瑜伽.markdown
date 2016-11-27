@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "读书- <<十分钟简易健身瑜伽>>"
+date:   2016-11-27 14:0:0 +0800
+categories: reading
+---
+
+# <<十分钟简易健身瑜伽>>    
+>讲短时间瑜伽的，读完照着里面的做了几个，挺有效果，书里面插图挺多，上班族健身的好方法,
+下载地址：[github下载](https://github.com/robertzhai/ebooks/blob/master/health/10%E5%88%86%E9%92%9F%E7%AE%80%E6%98%93%E5%81%A5%E8%BA%AB%E7%91%9C%E4%BC%BD.epub)。
+ 
+# 封面
+![十分钟简易健身瑜伽]({{ site.url }}/assets/reading/十分钟简易健身瑜伽.png)
+
+# 参考资料  
+>1.[http://bkso.baidu.com/view/3502716.htm](http://bkso.baidu.com/view/3502716.htm)  
