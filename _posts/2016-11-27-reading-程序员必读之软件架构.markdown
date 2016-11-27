@@ -18,3 +18,7 @@ categories: reading
 >1.[https://www.pingdom.com/](https://www.pingdom.com/)  
 >2.[https://github.com/techtribesje/techtribesje](https://github.com/techtribesje/techtribesje)
 >3.[https://en.wikipedia.org/wiki/Architecture_description_language](https://en.wikipedia.org/wiki/Architecture_description_language)
+>4.[https://en.wikipedia.org/wiki/OODA_loop](https://en.wikipedia.org/wiki/OODA_loop)
+>5.[http://www.laputan.org/mud/](http://www.laputan.org/mud/)
+>6.[http://www.codingthearchitecture.com/](http://www.codingthearchitecture.com/)
+>7.[https://www.infoq.com/presentations/Micro-Services](https://www.infoq.com/presentations/Micro-Services)
