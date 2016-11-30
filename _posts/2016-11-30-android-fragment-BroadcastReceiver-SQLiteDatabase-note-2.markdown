@@ -9,9 +9,13 @@ categories: android
 # 1.dp、sp和密度
     dp 是密度无关像素的意思,也被称作 dip,和 px 相比,它在不同密度的屏幕中的显示比 例将保持一致。
     sp 是可伸缩像素的意思,它采用了和 dp 同样的设计理念,解决了文字大小的适配问题。
-    Android 中的密度就是屏幕每英 寸所包含的像素数,通常以 dpi 为单位。比如一个手机屏幕的宽是 2 英寸长是 3 英寸,如果 它的分辨率是 320*480 像素,那这个屏幕的密度就是 160dpi,如果它的分辨率是 640*960, 那这个屏幕的密度就是 320dpi,因此密度值越高的屏幕显示的效果就越精细。
-    在 160dpi 的屏幕上,1dp 等于 1px,而在 320dpi 的屏幕上,1dp 就等于 2px。因此,使用 dp 来指定控件的宽和高,就可以保证控件在不同密度的屏幕中的 显示比例保持一致。
-    尽量将控件或布局的大小指定成 match_parent 或 wrap_content,如果必须要指定一个固定值,则使用 dp 来作为单位,指定文字大小的时候 使用 sp 作为单位。
+    Android 中的密度就是屏幕每英 寸所包含的像素数,通常以 dpi 为单位。比如一个手机屏幕的宽是 2 
+    英寸长是 3 英寸,如果 它的分辨率是 320*480 像素,那这个屏幕的密度就是 160dpi,如果它的分辨率
+    是 640*960, 那这个屏幕的密度就是 320dpi,因此密度值越高的屏幕显示的效果就越精细。
+    在 160dpi 的屏幕上,1dp 等于 1px,而在 320dpi 的屏幕上,1dp 就等于 2px。因此,使用 dp 来
+    指定控件的宽和高,就可以保证控件在不同密度的屏幕中的 显示比例保持一致。
+    尽量将控件或布局的大小指定成 match_parent 或 wrap_content,如果必须要指定一个固定值,则使
+    用 dp 来作为单位,指定文字大小的时候 使用 sp 作为单位。
 
 
 # 2.fragment动态替换  		
@@ -78,7 +82,8 @@ categories: android
 	public class NewsContentActivity extends AppCompatActivity {
 
 
-    public static void actionStart(Context context, 					String newsTitle,
+    public static void actionStart(Context context, 					
+    String newsTitle,
 					String newsContent) {
 					
         Intent intent = new Intent(context, NewsContentActivity.class);
@@ -209,7 +214,9 @@ categories: android
         BufferedWriter writer = null;
         try {
         /*所有的文件都是默认存储到/data/data/<package name>/files/目录下的
-        MODE_PRIVATE 是默认的操作模式,表示当指 定同样文件名的时候,所写入的内容将会覆盖原文件中的内容,而 MODE_APPEND 则表示 如果该文件已存在就往文件里面追加内容,不存在就创建新文件
+        MODE_PRIVATE 是默认的操作模式,表示当指 定同样文件名的时候,所写入的内容
+        将会覆盖原文件中的内容,而 MODE_APPEND 则表示 如果该文件已存在就往文件里
+        面追加内容,不存在就创建新文件
         */
             out = openFileOutput("data", Context.MODE_PRIVATE);
             writer = new BufferedWriter(new OutputStreamWriter(out));
@@ -260,7 +267,11 @@ categories: android
 	}
 	
 # 8.SharedPreferences 读写数据  
-    SharedPreferences 文件都是存放在/data/data/<package name>/shared_prefs/目录下的。第二个参数用于指定操作模式,主要有两种模式可以选 择,MODE_PRIVATE 和 MODE_MULTI_PROCESS。MODE_PRIVATE 仍然是默认的操 作模式,和直接传入 0 效果是相同的,表示只有当前的应用程序才可以对这个 SharedPreferences 文件进行读写。MODE_MULTI_PROCESS 则一般是用于会有多个进程中 对同一个 SharedPreferences 文件进行读写的情况  
+    SharedPreferences 文件都是存放在/data/data/<package name>/shared_prefs/目录下的。
+    第二个参数用于指定操作模式,主要有两种模式可以选 择,MODE_PRIVATE 和 MODE_MULTI_PROCESS。
+    MODE_PRIVATE 仍然是默认的操 作模式,和直接传入 0 效果是相同的,表示只有当前的应用程序才可以
+    对这个 SharedPreferences 文件进行读写。MODE_MULTI_PROCESS 则一般是用于会有多个进程中 
+    对同一个 SharedPreferences 文件进行读写的情况  
 				
 >write  
 
@@ -285,20 +296,25 @@ categories: android
     参考：https://www.oschina.net/question/12_53183  
 >事务  
 
-	SQLiteDatabase db = dbHelper.getWritableDatabase(); db.beginTransaction(); // 开启事务
+	SQLiteDatabase db = dbHelper.getWritableDatabase(); 
+	db.beginTransaction(); // 开启事务
 	try {
         db.delete("Book", null, null);
         if (true) {
 	// 在这里手动抛出一个异常,让事务失败
            //throw new NullPointerException();
          }
-		ContentValues values = new ContentValues(); 	values.put("name", "Game of Thrones"); 	values.put("author", "George Martin"); 	values.put("pages", 720);
-	values.put("price", 20.85);
-	db.insert("Book", null, values); 	db.setTransactionSuccessful(); // 事务已经执行成功
-                    } catch (Exception e) {
-                        e.printStackTrace();
+		ContentValues values = new ContentValues(); 	
+		values.put("name", "Game of Thrones"); 	
+		values.put("author", "George Martin"); 	
+		values.put("pages", 720);
+        values.put("price", 20.85);
+        db.insert("Book", null, values); 	
+        db.setTransactionSuccessful(); // 事务已经执行成功
+    } catch (Exception e) {
+        e.printStackTrace();
 	} finally {
-	db.endTransaction(); // 结束事务
+	    db.endTransaction(); // 结束事务
 	} }
 	
 >更新  
