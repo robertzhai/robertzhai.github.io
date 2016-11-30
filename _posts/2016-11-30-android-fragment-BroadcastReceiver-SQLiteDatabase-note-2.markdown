@@ -50,9 +50,8 @@ categories: android
             android:layout_height="match_parent"
             />
     </FrameLayout>
-</LinearLayout>
+    </LinearLayout>
 
-	
 	AnotherRightFragment fragment = new AnotherRightFragment();
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager
@@ -283,7 +282,7 @@ categories: android
                 Log.d("MainActivity", "married is " + married);
 
 # 9.SQLite 数据库存储
-https://www.oschina.net/question/12_53183
+    参考：https://www.oschina.net/question/12_53183  
 >事务  
 
 	SQLiteDatabase db = dbHelper.getWritableDatabase(); db.beginTransaction(); // 开启事务
