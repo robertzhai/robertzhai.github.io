@@ -34,3 +34,5 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+categories:reading,projects,server,android,tools
