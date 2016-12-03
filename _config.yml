@@ -35,4 +35,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-categories:reading,projects,server,android,tools
+robertzhai_categories: reading,projects,server,android,tools
