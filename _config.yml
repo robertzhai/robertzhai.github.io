@@ -23,7 +23,7 @@ url: "https://robertzhai.github.io" # the base hostname & protocol for your site
 github_username:  robertzhai
 
 #分页
-paginate: 15
+paginate: 12
 paginate_path: "/page:num/index.html"
 
 
