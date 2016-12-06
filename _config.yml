@@ -22,6 +22,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://robertzhai.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  robertzhai
 
+#分页
+paginate: 15
+paginate_path: "/page:num/index.html"
 
 
 
@@ -29,8 +32,7 @@ github_username:  robertzhai
 markdown: kramdown
 theme: minima
 google_analytics: UA-87177503-1
-gems:
-  - jekyll-feed
+gems: [jekyll-paginate, jekyll-feed]
 exclude:
   - Gemfile
   - Gemfile.lock
