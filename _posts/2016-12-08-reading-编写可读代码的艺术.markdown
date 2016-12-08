@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "读书- 《编写可读代码的艺术》"
+date:   2016-12-08 21:30:0 +0800
+categories: reading
+---
+
+# <<编写可读代码的艺术>>    
+>讲编码相关的技巧，从变量命名、函数、类、注释、循环、表达式、嵌套等方面来说明，很详细，值得一读。  
+
+>下载地址：[github下载](https://github.com/robertzhai/ebooks/blob/master/management/%E7%BC%96%E5%86%99%E5%8F%AF%E8%AF%BB%E4%BB%A3%E7%A0%81%E7%9A%84%E8%89%BA%E6%9C%AF.mobi)
+
+# 封面
+![编写可读代码的艺术]({{ site.url }}/assets/reading/编写可读代码的艺术.png)
+
+# 扩展阅读
+>1.[https://www.joelonsoftware.com/](https://www.joelonsoftware.com/)  
