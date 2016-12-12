@@ -5,15 +5,13 @@ date:   2016-12-05 20:00:0 +0800
 categories: android
 ---
 
-# service的 生命周期
+## service的 生命周期
 	    一旦在项目的任何位置调用了 Context 的 startService()方法,相应的服务就会启动起来,并回调
 	onStartCommand()方法。如果这个服务之前还没有创建过,onCreate()方法会先于 
     onStartCommand()方法执行。服务启动了之后会一直保持运行状态,直到 stopService()或
     stopSelf()方法被调用。注意虽然每调用一次 startService()方法,onStartCommand()就会
     执行 一次,但实际上每个服务都只会存在一个实例。所以不管你调用了多少次startService()方法, 
-    只需调用一次 stopService()或 stopSelf()方法,服务就会停止下来了。  
-
-        
+    只需调用一次 stopService()或 stopSelf()方法,服务就会停止下来了。      
         另外,还可以调用 Context 的 bindService()来获取一个服务的持久连接,这时就会回调 服务
     中的 onBind()方法。类似地,如果这个服务之前还没有创建过,onCreate()方法会先于 
     onBind()方法执行。之后,调用方可以获取到 onBind()方法里返回的 IBinder 对象的实例,这
@@ -25,9 +23,10 @@ categories: android
     我们是完全有可能对一个服务既调用了 startService()方法,又调用了 bindService()方法的,
     这种情况下该如何才能让服务销毁掉呢?根据 Android 系统的机制,一个服务只要被启动或 者被
     绑定了之后,就会一直处于运行状态,必须要让以上两种条件同时不满足,服务才能被 销毁。所以,
-    这种情况下要同时调用 stopService()和 unbindService()方法,onDestroy()方法才 会执行。
-    
-# webview  
+    这种情况下要同时调用 stopService()和 unbindService()方法,onDestroy()方法才 会执行。  
+   
+<!--more-->
+## webview  
 >permission  
 	
 	  <uses-permission android:name="android.permission.INTERNET" />  
@@ -64,7 +63,7 @@ categories: android
         webView.loadUrl("https://robertzhai.github.io");
     }
     
-# client send request
+## client send request
 > HttpURLConnection  
 	
 	private void sendRequestWithHttpURLConnection() {
@@ -112,7 +111,7 @@ categories: android
 	is not supported any more in sdk 23
 	
 	
-# parse json  
+## parse json  
 >JSONObject  
 
 	private void parseJSONWithJSONObject(String jsonData) {
@@ -144,7 +143,7 @@ categories: android
                 Log.d("MainActivity", "version is " + app.getVersion());
 	} }
 
-# Intent 来传递对象  
+## Intent 来传递对象  
 >Serializable   
 
 	Serializable 是序列化的意思,表示将一个对象转换成可存储或可传输的状态。序列化后 的对象可以
@@ -237,7 +236,7 @@ categories: android
     对比一下,Serializable 的方式较为简单,但由于会把整个对象进行序列化,因此效率方面会比 Parcelable 
     方式低一 些,所以在通常情况下还是更加推荐使用 Parcelable 的方式来实现 Intent 传递对象的功能。
     
-# 自定义日志工具
+## 自定义日志工具
 	
 	public class LogUtil {
         public static final int VERBOSE = 1;
@@ -274,7 +273,7 @@ categories: android
 	
 
         
-# 参考资料  
+## 参考资料  
 
 1.[第一行代码-android](https://github.com/robertzhai/ebooks/blob/master/android/%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E2%80%94%E2%80%94Android.pdf)  
 2.[http://blog.csdn.net/guolin_blog](http://blog.csdn.net/guolin_blog)

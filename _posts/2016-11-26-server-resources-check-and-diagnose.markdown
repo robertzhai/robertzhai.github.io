@@ -5,7 +5,7 @@ date:   2016-11-26 8:0:0 +0800
 categories: server
 ---
 
-# free 内存使用   
+## free 内存使用   
 
 	free -m
 	                total       used       free     shared    buffers     cached
@@ -13,12 +13,12 @@ categories: server
     -/+ buffers/cache:       5599      58807
     Swap:            0          0          0
     
-	显示可用内存58807M,总内存64407M
+	显示可用内存58807M,总内存64407M  
 
-# top 看负载  
+## top 看负载  
 	主要看 load average和是否有些不明进程在运行，用pidstat查看对应进程的资源使用情况
 
-# pidstat查看某进程使用内存、cpu、disk情况  
+## pidstat查看某进程使用内存、cpu、disk情况  
   
     查看5861进程
     pidstat -r -p 5861 3
@@ -41,7 +41,7 @@ categories: server
     08:45:00 AM      5861      0.00      0.00      0.00  pusher
     08:45:03 AM      5861      0.00      0.00      0.00  pusher
 
-# ps 和 grep 通过进程名查看进程  
+## ps 和 grep 通过进程名查看进程  
 
     如查看nginxps aux | grep nginx
     23131    18314  0.0  0.0 24084 2288 ?        S    Jul06   7:40 nginx: worker process
@@ -51,14 +51,14 @@ categories: server
     23131    18318  0.0  0.0 24084 2292 ?        S    Jul06   7:26 nginx: worker process
     23131    18319  0.0  0.0 24084 2292 ?        S    Jul06   6:39 nginx: worker process
 
-# netatat 查看端口号   
+## netatat 查看端口号   
    
     netstat -ant | grep 8099
 	
 	tcp        0      0 0.0.0.0:8099                0.0.0.0:*                   LISTEN
     tcp        0      0 10.99.23.15:8777            172.22.146.63:58099         ESTABLISHED  
 	
-# ping看主机是否能通   
+## ping看主机是否能通   
 
     ping baidu.com
 	
@@ -66,7 +66,7 @@ categories: server
     64 bytes from 180.149.132.47: icmp_seq=0 ttl=52 time=5.500 ms
     64 bytes from 180.149.132.47: icmp_seq=1 ttl=52 time=5.478 ms
 
-# telnet看主机某端口是否能通 ，是否有防火墙不能访问或者没开通外网端口  
+## telnet看主机某端口是否能通 ，是否有防火墙不能访问或者没开通外网端口  
 
     telnet 10.99.23.15 8099
 	
@@ -75,11 +75,11 @@ categories: server
     Escape character is '^]'.
     ^]
 
-# df 查看磁盘使用情况  
+## df 查看磁盘使用情况  
 
     df -h
 
-# du 查看当前目录下文件和文件夹大小  
+## du 查看当前目录下文件和文件夹大小  
 
     du -sh *
     516K	controllers
@@ -88,10 +88,10 @@ categories: server
     2.1M	library
     4.0K	link.sh
  
-# lsof查看删除的文件描述符还未释放
+## lsof查看删除的文件描述符还未释放
     lsof | grep deleted
     
-# kill 进程
+## kill 进程
 	kill -9 pid
 	
 	一般结合awk和xargs使用
@@ -99,6 +99,6 @@ categories: server
 	
 
   
-# 参考资料
+## 参考资料
 1.[http://www.infoq.com/cn/news/2015/12/linux-performance](http://www.infoq.com/cn/news/2015/12/linux-performance)  
 2.[http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858874.html](http://www.cnblogs.com/ggjucheng/archive/2013/01/13/2858874.html)  

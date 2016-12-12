@@ -6,11 +6,12 @@ categories: android
 ---
 
 
-# 1.dp、sp和密度
+## 1.dp、sp和密度
     dp 是密度无关像素的意思,也被称作 dip,和 px 相比,它在不同密度的屏幕中的显示比 例将保持一致。
     sp 是可伸缩像素的意思,它采用了和 dp 同样的设计理念,解决了文字大小的适配问题。
-    Android 中的密度就是屏幕每英 寸所包含的像素数,通常以 dpi 为单位。比如一个手机屏幕的宽是 2 
-    英寸长是 3 英寸,如果 它的分辨率是 320*480 像素,那这个屏幕的密度就是 160dpi,如果它的分辨率
+    Android 中的密度就是屏幕每英 寸所包含的像素数,通常以 dpi 为单位。比如一个手机屏幕的宽是 2   
+
+    英寸长是3 英寸,如果 它的分辨率是 320*480 像素,那这个屏幕的密度就是 160dpi,如果它的分辨率
     是 640*960, 那这个屏幕的密度就是 320dpi,因此密度值越高的屏幕显示的效果就越精细。
     在 160dpi 的屏幕上,1dp 等于 1px,而在 320dpi 的屏幕上,1dp 就等于 2px。因此,使用 dp 来
     指定控件的宽和高,就可以保证控件在不同密度的屏幕中的 显示比例保持一致。
@@ -18,7 +19,7 @@ categories: android
     用 dp 来作为单位,指定文字大小的时候 使用 sp 作为单位。
 
 
-# 2.fragment动态替换  		
+## 2.fragment动态替换  		
 	动态添加碎片主要分为 5 步。
 	1. 创建待添加的碎片实例。  
 	2. 获取到 FragmentManager,在活动中可以直接调用 	getFragmentManager()方法得到。
@@ -65,7 +66,7 @@ categories: android
                 fragmentTransaction.commit();
                 
 
-# 3.fragment 和 activity 通信   
+## 3.fragment 和 activity 通信   
 >1.activity 获取 fragment  
  
 	RightFragment rightFragment = (RightFragment) getFragmentManager()
@@ -75,7 +76,7 @@ categories: android
 
 	MainActivity activity = (MainActivity) getActivity();
 	
-# 4.简化启动另一个activity的方法
+## 4.简化启动另一个activity的方法
 	
 	在NewsContentActivity加入actionStart方法
 	
@@ -116,7 +117,7 @@ categories: android
                     news.getContent());
                     
 
-# 5.监听网络变化的广播
+## 5.监听网络变化的广播
 	public class MainActivity extends AppCompatActivity {
 
     private IntentFilter intentFilter;
@@ -167,7 +168,7 @@ categories: android
     }
 }
 
-# 6.发送标准广播
+## 6.发送标准广播
 	
 	public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
@@ -180,7 +181,7 @@ categories: android
                                 ".MY_BROADCAST");
                         sendBroadcast(intent);
                         
-# 7.读写文件
+## 7.读写文件
 	public class MainActivity extends AppCompatActivity {
 
     private EditText editText;
@@ -266,7 +267,7 @@ categories: android
     }
 	}
 	
-# 8.SharedPreferences 读写数据  
+## 8.SharedPreferences 读写数据  
     SharedPreferences 文件都是存放在/data/data/<package name>/shared_prefs/目录下的。
     第二个参数用于指定操作模式,主要有两种模式可以选 择,MODE_PRIVATE 和 MODE_MULTI_PROCESS。
     MODE_PRIVATE 仍然是默认的操 作模式,和直接传入 0 效果是相同的,表示只有当前的应用程序才可以
@@ -337,6 +338,6 @@ categories: android
     // 插入第一条数据
     values.clear();     
           
-# 参考资料  
+## 参考资料  
 
 1.[第一行代码-android](https://github.com/robertzhai/ebooks/blob/master/android/%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E2%80%94%E2%80%94Android.pdf)  

@@ -5,7 +5,7 @@ date:   2016-11-23 21:0:0 +0800
 categories: server
 ---
 
-# 非法请求过滤  
+## 非法请求过滤  
 >1.method
 
 	if ($request_method !~ ^(GET|HEAD|POST)$) {
@@ -17,7 +17,7 @@ categories: server
 	if ( $request_uri ~ "(\$|;|'|%27|\(|\)|\<|%3C|\>|%3E)+" ){
 		return 403;
 	}  
-	
+
 >3.禁止文件注入  
  
 	if ($query_string ~ "[a-zA-Z0-9_]=http://") {
@@ -44,7 +44,7 @@ categories: server
 		    return 403;
 	}
 
-# https 访问
+## https 访问
 >1.生成证书  
 
 	openssl req -x509 -nodes -days 36500 -newkey rsa:2048 -keyout ./nginx.key -out ./nginx.crt
@@ -82,7 +82,7 @@ categories: server
      
 >3.重启nginx  
      
-# proxy pass 反向代理
+## proxy pass 反向代理
 >1.配置将外网请求转发到内网某台机器
 
 	location /apitest/ {
@@ -111,7 +111,7 @@ categories: server
       }
 
 
-# css , js , images cache
+## css , js , images cache
 >  
 		
 	# images (?:exp)匹配exp,不捕获匹配的文本，也不给此分组分配组号
@@ -131,7 +131,7 @@ categories: server
 	
 	
 	
-# 参考资料
+## 参考资料
 1.[https://github.com/h5bp/server-configs-nginx/blob/master/h5bp/location/expires.conf ](https://github.com/h5bp/server-configs-nginx/blob/master/h5bp/location/expires.conf )  
 2.[https://www.nginx.com/resources/wiki/start/](https://www.nginx.com/resources/wiki/start/)  
 3.[http://nginx.org/en/docs/http/ngx_http_headers_module.html](http://nginx.org/en/docs/http/ngx_http_headers_module.html)

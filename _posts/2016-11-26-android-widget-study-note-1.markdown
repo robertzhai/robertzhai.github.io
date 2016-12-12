@@ -6,23 +6,23 @@ categories: android
 ---
 
 
-# Toast 提示
+## Toast 提示
 	   Toast.makeText(MainActivity.this, "toast content", Toast.LENGTH_SHORT).show();
 
 
-# EditText设置行数
+## EditText设置行数
 	<EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="type something here"
         android:maxLines="5"
-        android:id="@+id/editText" />
-        
-# ImageView替换图片
+        android:id="@+id/editText" />  
+
+## ImageView替换图片
 	imageView = (ImageView) findViewById(R.id.imageView);
 	imageView.setImageResource(R.mipmap.ic_sunshine);
 	
-# TextView
+## TextView
 	<TextView
         android:id="@+id/text_view"
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@ categories: android
         android:textColor="#00ff00"
         android:text="This is TextView" />
 	
-# Button 绑定事件
+## Button 绑定事件
 >implements View.OnClickListener  
  
 	public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -80,7 +80,7 @@ categories: android
                 }
         );
 
-# progressBar 隐藏和进度控制
+## progressBar 隐藏和进度控制
 >隐藏  
 
 	progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -103,7 +103,7 @@ categories: android
                 progress += 10;
                 progressBar.setProgress(progress);
                 
-# AlertDialog
+## AlertDialog
 	
 	AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
 	dialog.setTitle("this is dialog");
@@ -123,7 +123,7 @@ categories: android
 	});
 	dialog.show();
                 
-# ProgressDialog
+## ProgressDialog
 
 	ProgressDialog dialog = new ProgressDialog
                         (MainActivity.this);
@@ -133,7 +133,7 @@ categories: android
 
     dialog.show();
     
-# 自定义标题组件  
+## 自定义标题组件  
 
 >main.xml  
   
@@ -236,7 +236,7 @@ categories: android
     }
 	}
 	
-# listview 列表展示  
+## listview 列表展示  
 
 >水果展示列表ViewHolder优化  
 
@@ -321,6 +321,6 @@ categories: android
 
         
           
-# 参考资料  
+## 参考资料  
 
 1.[第一行代码-android](https://github.com/robertzhai/ebooks/blob/master/android/%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E2%80%94%E2%80%94Android.pdf)  

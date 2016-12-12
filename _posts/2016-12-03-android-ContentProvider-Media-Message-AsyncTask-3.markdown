@@ -6,7 +6,7 @@ categories: android
 ---
 
 
-# ContentResolver读取联系人
+## ContentResolver读取联系人
 	public class MainActivity extends AppCompatActivity {
 
     ListView contactsView;
@@ -24,7 +24,7 @@ categories: android
                 contactsList);
         contactsView.setAdapter(adapter);
         readContacts();
-    }
+    }    
 
     private void readContacts() {
 
@@ -52,9 +52,10 @@ categories: android
             }
         }
     }
-	}
+	}  
 	
-# 自定义ContentResolver
+<!--more-->
+## 自定义ContentResolver
 >manifest注册provider
 	
 	<provider
@@ -311,7 +312,7 @@ categories: android
     }
 	}
 
-# adb shell 查看模拟器中sqlite数据表数据步骤
+## adb shell 查看模拟器中sqlite数据表数据步骤
 	$ adb shell
 	#cd /data/data/com.example.databasetest/databases
 	#sqlite3 BookStore.db
@@ -319,7 +320,7 @@ categories: android
 	sqlite>select * from Book
 	
 
-# 拍照
+## 拍照
 
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	
@@ -396,7 +397,7 @@ categories: android
     }
 	}
 	
-# 线程的基本用法  
+## 线程的基本用法  
 
 	Android 多线程编程其实并不比 Java 多线程编程特珠,基本都是使用相同的语法。比如说,定义一个线
 	程只需要新建一个类继承自 Thread,然后重写父类的 run()方法,并在里面 编写耗时逻辑即可,如下所示:
@@ -427,7 +428,7 @@ categories: android
 	// 处理具体的逻辑 }
 	}).start();
 	
-# 在子线程中更新 UI  
+## 在子线程中更新 UI  
 
 		和许多其他的 GUI 库一样,Android 的 UI 也是线程不安全的。也就是说,如果想要更 新应用程序
 		里的 UI 元素,则必须在主线程中进行,否则就会出现异常。
@@ -582,6 +583,6 @@ categories: android
     如果想要启动这个任务,只需编写以下代码即可:
     new DownloadTask().execute();    
           
-# 参考资料  
+## 参考资料  
 
 1.[第一行代码-android](https://github.com/robertzhai/ebooks/blob/master/android/%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E2%80%94%E2%80%94Android.pdf)  

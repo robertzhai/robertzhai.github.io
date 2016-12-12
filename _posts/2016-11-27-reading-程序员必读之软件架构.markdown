@@ -5,16 +5,16 @@ date:   2016-11-27 16:30:0 +0800
 categories: reading
 ---
 
-# <<程序员必读之软件架构>>    
+## <<程序员必读之软件架构>>    
 >讲软件架构的，架构师成长的各个方面。最后讲述了一个用java构建的项目"技术部落"的架构完整实践，
-技术部落项目的在线阅读地址 [https://leanpub.com/techtribesje/read](https://leanpub.com/techtribesje/read)。  
-
->下载地址：[github下载](https://github.com/robertzhai/ebooks/blob/master/Architecture/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E8%AF%BB%E4%B9%8B%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84.epub)。
+技术部落项目的在线阅读地址 [https://leanpub.com/techtribesje/read](https://leanpub.com/techtribesje/read)。    
+  
+>下载地址：[github下载](https://github.com/robertzhai/ebooks/blob/master/Architecture/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E8%AF%BB%E4%B9%8B%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84.epub)。  
  
-# 封面
+## 封面
 ![程序员必读之软件架构]({{ site.url }}/assets/reading/程序员必读之软件架构.png)
 
-# 参考资料  
+## 参考资料  
 >1.[https://www.pingdom.com/](https://www.pingdom.com/)  
 >2.[https://github.com/techtribesje/techtribesje](https://github.com/techtribesje/techtribesje)
 >3.[https://en.wikipedia.org/wiki/Architecture_description_language](https://en.wikipedia.org/wiki/Architecture_description_language)

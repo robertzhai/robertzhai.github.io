@@ -1,0 +1,249 @@
+---
+layout: post
+title:  "读书- 《高性能网站建设指南》"
+date:   2016-12-11 21:30:0 +0800
+categories: reading
+---
+
+## <<高性能网站建设指南>>    
+>讲前端优化的，部分设计服务器配置，就是雅虎的23军规。  
+
+>性能黄金法则  
+
+  只有10%-20%花在下载html文档，80%-90%花在下载页面的组件上。  
+    
+## rules 
+ 
+## 1 - Make Fewer HTTP Requests 
+ 	css sprites 
+ 	Inline Images
+ 	merge css , scripts
+ 	
+## 2 - Use a Content Delivery Network
+
+## 3 - Add an Expires Header
+
+>Expires Header
+	
+	Expires: time
+	要求服务器和客户端时间严格同步
+	
+>max-age and mod_expires
+	
+	支持http 1.1
+	Cache-Control:max-age=seconds_since_requested
+
+	不支持http 1.1 用Expires
+	
+	如果Cache-Control 和 Expires 同时出现，Cache-Control  将重写Expires，可以同时指定这2个响应头
+	
+
+## 4 - Gzip Components
+
+>client 标识对压缩的支持
+	
+	Accept-Encoding: gzip,deflate
+
+>server  
+	
+	Content-Encoding: gzip  
+	很多浏览器只支持gzip, deflate不支持，gzip是最理想的方法，对于1k以上的文件采用gzip，小于1k的不采用
+	
+>nginx gzip配置
+	
+	gzip on;
+	gzip_min_length 1k;
+	gzip_buffers 4 16k;
+	gzip_comp_level 2;
+	gzip_types text/plain application/x-javascript text/css application/xml text/javascript application/x-httpd-php ;
+	gzip_vary off;
+	gzip_disable "MSIE [1-6]\.";
+
+![编写可读代码的艺术]({{ site.url }}/assets/reading/gzip_sites.png)  
+
+## 5 - Put Stylesheets at the Top
+	样式表放在底部会阻碍页面逐步呈现。
+>1.在head中引入样式  
+>2.如果样式表不要求呈现页面，在页面加载完后动态加载进来。
+
+## 6 - Put Scripts at the Bottom
+	使用脚本时，对于位于脚本以下的内容，逐步呈现被阻塞了，将脚本放在越靠下的地方，越多的内容能逐步的呈现。
+
+>并行下载，浏览器对同一个域名的资源并发下载有限制。  
+>脚本阻塞下载，按先后顺序执行
+>对于可以延迟加载的脚本用 defer属性
+
+## 7 - Avoid CSS Expressions
+	只有 IE 支持 CSS Expression  
+
+>1.一次性表达式    
+>2.事件处理，js来改变样式
+
+##  8 - Make JavaScript and CSS External
+>1.加载后下载，onload事件
+>2.动态内联，结合加载后下载  
+
+![编写可读代码的艺术]({{ site.url }}/assets/reading/js_css_download_1.png)
+![编写可读代码的艺术]({{ site.url }}/assets/reading/js_css_download_2.png)
+
+
+## 9 - Reduce DNS Lookups
+	通常浏览器查找一个给定的主机ip地址要花费20~120ms,DNS查找可以被缓存起来，留在操作系统的DNS缓存里，浏览器也能缓存DNS结果。
+>使用keep-alive和较少的域名
+
+## 10 - Minify JavaScript
+>1.移除注释和空白字符(空格、换行、制表符) 
+>2.混淆，增加对代码进行反向工程的难度 
+>3.css  minify
+>4.工具：jsmin , dojo compressor
+
+## 11 - Avoid Redirects
+	301和302是最常用的重定向，3xx的响应码都是告诉用户代理必须执行进一步操作才能完成请求，重定向会使页面变慢。
+>1.缺少请求url的斜线‘/’  
+>2.连接网站，旧的url到新的url  
+>3.跟踪流量 ，如下信标方法 
+	
+	<a href="http://en.wikipedia.org/wiki/Performance"
+   	onclick="resultBeacon(this); return false;">Performance - Wikipedia</a>
+
+	<script>
+	var beacon;
+	function resultBeacon(anchor) {
+	    beacon = new Image();
+	    beacon.onload = gotoUrl;
+	    beacon.onerror = gotoUrl;  // in case the image fails, we still want to redirect the user
+		beacon.anchor = anchor;
+	    beacon.src = "/bin/beacon204.gif?url=" + escape(anchor.href);
+	}
+	
+	function gotoUrl() {
+	    document.location = beacon.anchor.href;
+	}
+	</script>		
+	
+>更好的跟踪流量的方法
+	
+		<script>
+	var gAnchor, gXhrObj;
+	
+	function resultBeacon(anchor) {
+		gAnchor = anchor;
+	    beacon_src = "http://stevesouders.com/images/beacon.gif?url=" + escape(anchor.href) + "&t=" + Number(new Date());
+	
+		gXhrObj = getXHRObject();
+		gXhrObj.onreadystatechange = xhrCallback;
+		try {
+			gXhrObj.open("GET", beacon_src, true);  // true == async
+			gXhrObj.send("");
+		}
+		catch(err) {
+			gotoUrl();  // on failure, just go to the target url
+	    }
+	
+	}
+	
+	function xhrCallback(respAr) {
+	    var readyState = ( respAr && "undefined" != typeof(respAr.readyState) ? respAr.readyState : gXhrObj.readyState );
+	    if ( 2 == readyState ) {    // the request is done enough to risk unloading the page
+	        gotoUrl();
+	    }
+	}
+	
+	function gotoUrl() {
+	    document.location = gAnchor.href;
+	}
+	
+	// Find the right syntax for creating an XHR object.
+	function getXHRObject() {
+	    var xhrObj = false;
+	
+	    try {
+	        xhrObj = new XMLHttpRequest();
+	    }
+	    catch(e){
+	        var progid = ['MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP'];
+	        for ( var i=0; i < progid.length; ++i ) {
+	            try {
+	                xhrObj = new ActiveXObject(progid[i]);
+	            }
+	            catch(e) {
+	            }
+	        }
+	    }
+	    finally {
+	        return xhrObj;
+	    }
+	}
+	
+	</script>	
+	
+>4.美化url  
+
+## 12 - Remove Duplicate Scripts
+	重复脚本损伤性能，不必要的http请求和执行js所浪费的时间。
+	
+## 13 - Configure ETags
+	实体标签（Entity Tag, Etag)是服务器和浏览器用于确认缓存组件有效性的一种机制。浏览器在重用缓存之前，必须检查是否任然有效，称为一个条件GET请求，会产生一个http请求用户检查，如果有效服务器返回“304 not modified”状态码。  
+	
+	服务器检测缓存的组件和原始服务器上匹配有两种方式：比较最新修改日期和比较实体标签。
+
+>1.服务器返回Last-Modified响应头告诉浏览器最新的修改日期，浏览器会进行缓存组件以及最新修改日期；下一次请求时浏览器会使用If-Modified-Since头，将最新修改日期传回服务器进行比较，如果匹配，返回304，而不是传输整个组件。 
+ 
+>2.Etag在http 1.1中引入，Etag是唯一标识了一个组件的一个特定版本的字符串，必须用引号引起来，原始服务器用Etag响应头头来指定组件的Etag。验证一个组件时，浏览器使用If-None-Match头将Etag传回原服务器，如果Etag匹配就返回304状态码，否则传回整个组件。  If-None-Match 优先级高于If-Modified-Since。  
+
+>3.nginx config etag
+	
+	location  ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
+	etag on;
+	
+	access_log  off; #不记录不需要的访问日志
+	
+	expires    3d;}
+ 
+## 14 - Make AJAX Cacheable
+ 
+## 15 - Avoid empty src or href
+	browser makes another request to your server.
+	
+## 16 - Reduce the Number of DOM Elements
+	A complex page means more bytes to download and it also means slower DOM access in JavaScript. It makes a difference if you loop through 500 or 5000 DOM elements on the page when you want to add an event handler for example.  
+	The number of DOM elements is easy to test, just type in Firebug's console:
+	document.getElementsByTagName('*').length
+	
+## 17 - No 404s 
+	HTTP requests are expensive so making an HTTP request and getting a useless response (i.e. 404 Not Found) is totally unnecessary and will slow down the user experience without any benefit.  
+	Particularly bad is when the link to an external JavaScript is wrong and the result is a 404. First, this download will block parallel downloads. Next the browser may try to parse the 404 response body as if it were JavaScript code, trying to find something usable in it.
+
+## 18 - Reduce Cookie Size
+	HTTP cookies are used for a variety of reasons such as authentication and personalization. Information about cookies is exchanged in the HTTP headers between web servers and browsers. It's important to keep the size of cookies as low as possible to minimize the impact on the user's response time.
+	
+## 19 - Use Cookie-free Domains for Components
+	When the browser makes a request for a static image and sends cookies together with the request, the server doesn't have any use for those cookies. So they only create network traffic for no good reason. You should make sure static components are requested with cookie-free requests. Create a subdomain and host all your static components there.
+
+	If your domain is www.example.org, you can host your static components on static.example.org. However, if you've already set cookies on the top-level domain example.org as opposed to www.example.org, then all the requests to static.example.org will include those cookies. In this case, you can buy a whole new domain, host your static components there, and keep this domain cookie-free. Yahoo! uses yimg.com, YouTube uses ytimg.com, Amazon uses images-amazon.com and so on.
+
+## 20 - Avoid Filters
+	The IE-proprietary AlphaImageLoader filter aims to fix a problem with semi-transparent true color PNGs in IE versions < 7. The problem with this filter is that it blocks rendering and freezes the browser while the image is being downloaded. It also increases memory consumption and is applied per element, not per image, so the problem is multiplied.
+
+	The best approach is to avoid AlphaImageLoader completely and use gracefully degrading PNG8 instead, which are fine in IE. If you absolutely need AlphaImageLoader, use the underscore hack _filter as to not penalize your IE7+ users.
+
+## 21 - Don't Scale Images in HTML
+	Don't use a bigger image than you need just because you can set the width and height in HTML. If you need 
+	<img width="100" height="100" src="mycat.jpg" alt="My Cat" /> 
+	then your image (mycat.jpg) should be 100x100px rather than a scaled down 500x500px image.
+
+## 22 - Make favicon.ico Small and Cacheable
+
+## 封面
+![编写可读代码的艺术]({{ site.url }}/assets/reading/高性能网站建设指南.png)
+
+## 下载
+>[github下载](https://github.com/robertzhai/ebooks/blob/master/Architecture/%E9%AB%98%E6%80%A7%E8%83%BD%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE%E6%8C%87%E5%8D%97.pdf)
+	
+## 扩展阅读
+>1.[http://stevesouders.com/examples/rule-min-http.php](http://stevesouders.com/examples/rule-min-http.php) 
+>2.[http://www.nginx.cn/76.html](http://www.nginx.cn/76.html)
+>3.[http://nginx.org/en/docs/http/ngx_http_gzip_module.html#gzip_buffers](http://nginx.org/en/docs/http/ngx_http_gzip_module.html#gzip_buffers)
+>4.[https://imququ.com/post/my-nginx-conf-for-wpo.html](https://imququ.com/post/my-nginx-conf-for-wpo.html)  
+>5.[http://yslow.org/](http://yslow.org/)  
+ 

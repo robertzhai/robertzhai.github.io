@@ -5,10 +5,10 @@ date:   2016-11-22 8:0:0 +0800
 categories: projects
 ---
 
-# gulp
-> 对项目的静态资源html、js、css、image压缩和打包的工具，可以对应替换html中css、js、image，css中image的路径。
+## gulp
+> 对项目的静态资源html、js、css、image压缩和打包的工具，可以对应替换html中css、js、image，css中image的路径。  
 
-# 主要依赖 
+## 主要依赖 
 {% highlight ruby %}
 {
    "name": "my-project",
@@ -30,7 +30,7 @@ categories: projects
  }  
 {% endhighlight %}  
 
-# gulpfile.js 内容如下  
+## gulpfile.js 内容如下  
 {% highlight ruby %}
 // Include gulp
  var gulp = require('gulp');
@@ -111,9 +111,9 @@ gulp-practise$ gulp
  [07:48:17] Finished 'images' after 369 ms
 {% endhighlight %} 
 
-# 项目github路径  
+## 项目github路径  
 >[https://github.com/robertzhai/web_build/tree/master/gulp-practise](https://github.com/robertzhai/web_build/tree/master/gulp-practise)
 
-# 扩展阅读  
+## 扩展阅读  
 >1. [http://www.gulpjs.com.cn/](http://www.gulpjs.com.cn/) 
 
