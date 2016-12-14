@@ -17,5 +17,6 @@ categories: reading
 ## 扩展阅读
 >1.[http://vuejs.org/v2/guide/index.html](http://vuejs.org/v2/guide/index.html)   
 >2.[开始使用 Vuejs ：简单的 Todo App](https://www.laravist.com/series/vue-js-2-0-series/episodes/1)  
->3.[http://vuejs.org/v2/examples/todomvc.html](http://vuejs.org/v2/examples/todomvc.html)
+>3.[http://vuejs.org/v2/examples/todomvc.html](http://vuejs.org/v2/examples/todomvc.html)  
+>4.[http://todomvc.com/](http://todomvc.com/)  
  
