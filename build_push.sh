@@ -9,3 +9,4 @@ echo "start push .."
 expect ~/.account/github.sh
 echo " end push ..."
 echo "please visit https://robertzhai.github.io/ "
+echo "done";

@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "阅读- <<软件架构设计-程序员向架构师转型必备>>"
+date:   2016-12-19 21:30:0 +0800
+categories: reading
+---
+
+## <<软件架构设计-程序员向架构师转型必备>>  
+> 讲架构设计相关的，分层设计设计一章写的不错。作者书中很经典的一句话："学样儿“未必适合，“知其所以然”才是王道。  
+
+## 合理分层
+>3层架构  
+
+	展现层（表现层）+ 业务层（业务逻辑层）+ 数据层（数据访问层）
+
+好处：1）实现一定程度的关注度分离，利于各层逻辑的重用；
+2）规范层间的调用关系，降低层与层之间的依赖；
+3）如果接口设计合理，可容易用新的实现来替换原有层次的实现
+![three-layer]({{ site.url }}/assets/reading/three-layer.png)
+
+>4 层架构  
+
+	UI（用户界面层 User Interface）+   
+	SI(System Interface 系统交互层)  + 
+	PD(Problem Domain 问题领域层) + 
+	DM(Data Management 数据管理层)
+
+![four-layer.png]({{ site.url }}/assets/reading/four-layer.png)
+
+## 用例驱动的模块划分方法
+![step_arch.png]({{ site.url }}/assets/reading/step_arch.png)
+
+## qq video 架构图，垂直分层
+![qq_video.png]({{ site.url }}/assets/reading/qq_video.png)
+
+## 电子书下载
+[github下载](https://github.com/robertzhai/ebooks/blob/master/Architecture/%5B%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E5%90%91%E6%9E%B6%E6%9E%84%E5%B8%88%E8%BD%AC%E5%9E%8B%E5%BF%85%E5%A4%87(%E7%AC%AC%E4%BA%8C%E7%89%88)%5D.%E6%B8%A9%E6%98%B1.%E6%89%AB%E6%8F%8F%E7%89%88.pdf)
