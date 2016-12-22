@@ -40,3 +40,18 @@ categories: server
 ## awk 格式化输出
 	awk -F 'err_no|err_info|extra=' '{ printf("err_no=%s,error_info=%s\n",  $2, $3); }'  warn.txt
  
+ # comm 两文件做差集
+    comm命令的参数
+        -1   不显示只在第1个文件里出现过的列。
+        -2   不显示只在第2个文件里出现过的列。
+        -3   不显示只在第1和第2个文件里出现过的列。
+    comm - 12     就只显示在两个文件中都存在的行；
+    comm - 23    只显示在第一个文件中出现而未在第二个文件中出现的行；
+    comm - 123  则什么也不显示。
+    comm a.txt b.tx
+    comm -1 a.txt b.txt
+    
+ # tac
+    cat的变身，逆序查看文件内容
+    
+ 
