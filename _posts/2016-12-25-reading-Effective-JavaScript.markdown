@@ -12,6 +12,8 @@ categories: reading
 ![eventloop_01]({{ site.url }}/assets/reading/eventloop_01.png)
 ![eventloop_02]({{ site.url }}/assets/reading/eventloop_02.png)
 
+## 封面
+![effectivejavascript.png]({{ site.url }}/assets/reading/effectivejavascript.png)
 
 ## 电子书下载
 [github下载](https://github.com/robertzhai/ebooks/blob/master/client/%5Bwww.java1234.com%5DEffective%20JavaScript(Addison%2C2012).pdf)
