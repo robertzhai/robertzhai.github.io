@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "阅读- <<听懂暗语-读懂人心>>"
+date:   2016-12-28 21:30:0 +0800
+categories: reading
+---
+
+## <<听懂暗语-读懂人心>>  
+> 讲生活中和职场说话和为人处世的，暗语很多，受益匪浅。  
+
+
+## 封面
+![听懂暗语-读懂人心]({{ site.url }}/assets/reading/听懂暗语-读懂人心.png)
+
+## 电子书下载
+[github下载](https://github.com/robertzhai/ebooks/blob/master/life/%E5%90%AC%E6%87%82%E6%9A%97%E8%AF%AD-%E8%AF%BB%E6%87%82%E4%BA%BA%E5%BF%83.mobi)
