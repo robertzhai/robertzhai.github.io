@@ -11,8 +11,8 @@ categories: entertainment
 
 
 ## youtube
-[youtube](https://www.youtube.com/watch?v=cG8y0VXQp0U&t=2496s)
+youtube: [youtube](https://www.youtube.com/watch?v=cG8y0VXQp0U&t=2496s)
 
 ## 主题歌
-[神的传说](https://www.youtube.com/watch?v=z3g5l5M-gm4)
+神的传说: [神的传说](https://www.youtube.com/watch?v=z3g5l5M-gm4)
 
