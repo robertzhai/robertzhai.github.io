@@ -5,8 +5,8 @@ date:   2017-1-21 15:30:0 +0800
 categories: tools
 ---
     
-    之前总结了svn的相关命令，见[svn命令总结](https://robertzhai.github.io/tools/2016/12/02/tools-svn-summary.html),
-这次抽空把git整理了下，后续再增加revert、stash相关的。八二原则，常用的就是少部分命令。
+> 之前总结了svn的相关命令，见[svn命令总结](https://robertzhai.github.io/tools/2016/12/02/tools-svn-summary.html)。
+> 这次抽空把git整理了下。八二原则，常用的就是少部分命令。
 
 1.初始化项目，设置提交显示的用户名和邮箱
 
@@ -77,8 +77,8 @@ categories: tools
 
 	git push origin basic
 	
-14.查看远程仓库
-
+14.查看远程仓库 
+ 
 	git remote -v
 
 15.查看远程分支
@@ -99,10 +99,22 @@ categories: tools
 	To git@github.com:robertzhai/todo-mvc.git
 	 * [new branch]      flask-mongodb-bootstrap-v1.0.0 -> flask-mongodb-bootstrap-v1.0.0
 	
+17.查看版本号
+	
+	git --version
+	
+18.分支 merge
+
+	git merge branchname
+	
+
 	
 
 ## 扩展阅读
-1.[https://git-scm.com/book/zh/v1](https://git-scm.com/book/zh/v1)
+* [https://git-scm.com/book/zh/v1](https://git-scm.com/book/zh/v1)  
+* [git 权威指南](https://pan.baidu.com/s/1kV5COab)
+
+	
 
 	
 
