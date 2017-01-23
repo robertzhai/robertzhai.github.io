@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "服务器环境搭建和配置- centos install lnmp via compile "
+title:  "服务器环境搭建和配置- centos install nginx php mysql "
 date:   2017-1-23 18:30:0 +0800
 categories: server
 ---
 
->搭建一个测试环境，记录下，备忘。
+>搭建一个LNMP的测试环境，记录下，备忘。
 
 ## nginx configure and install
 
@@ -142,3 +142,4 @@ categories: server
 * [my-nginx-conf-for-wpo.html](https://imququ.com/post/my-nginx-conf-for-wpo.html)
 * [www.nginx.cn/231.html](http://www.nginx.cn/231.html)
 * [www.nginx.cn/install](http://www.nginx.cn/install)
+* [yq.aliyun.com](https://yq.aliyun.com/articles/38540)
