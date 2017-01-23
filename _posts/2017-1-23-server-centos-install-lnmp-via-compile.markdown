@@ -139,6 +139,6 @@ categories: server
 
 
 ## 扩展阅读
-* https://imququ.com/post/my-nginx-conf-for-wpo.html
-* http://www.nginx.cn/231.html
-* http://www.nginx.cn/install
+* [my-nginx-conf-for-wpo.html](https://imququ.com/post/my-nginx-conf-for-wpo.html)
+* [www.nginx.cn/231.html](http://www.nginx.cn/231.html)
+* [www.nginx.cn/install](http://www.nginx.cn/install)
