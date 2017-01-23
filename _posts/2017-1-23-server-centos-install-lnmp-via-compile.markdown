@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "阅读- <<centos install lnmp via compile>>"
+title:  "服务器环境搭建和配置- centos install lnmp via compile "
 date:   2017-1-23 18:30:0 +0800
 categories: server
 ---
