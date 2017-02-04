@@ -107,7 +107,8 @@ categories: tools
 
 	git merge branchname
 	
-
+19.revert没有commit的文件
+    git checkout file
 	
 
 ## 扩展阅读

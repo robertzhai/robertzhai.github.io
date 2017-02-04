@@ -138,7 +138,24 @@ categories: server
     sudo service php-fpm start
 
 
-## 扩展阅读
+## ssh 信任关系，配置好本地可以 ssh 或者 rsync 远程开发机，不用输入密码
+    mkdir /home/work/.ssh
+    cd ~
+    chmod 700 .ssh
+    生成本地的私钥和公钥
+    ssh-keygen -t rsa
+    scp id_rsa.pub work@abc.hostname:/home/work/.ssh/authorized_keys
+    ssh work@abc.hostname
+    cd /home/work/.ssh/
+    chmod 600 authorized_keys
+    不能少了chmod两步，否则会导致ssh还需要输入密码
+    
+
+## 上传代码到服务器
+    rsync -avr --exclude=xxx.sh  *  work@abc.host:/path/to
+
+
+# 扩展阅读
 * [my-nginx-conf-for-wpo.html](https://imququ.com/post/my-nginx-conf-for-wpo.html)
 * [www.nginx.cn/231.html](http://www.nginx.cn/231.html)
 * [www.nginx.cn/install](http://www.nginx.cn/install)
