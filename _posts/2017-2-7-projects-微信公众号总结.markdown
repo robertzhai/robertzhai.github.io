@@ -111,7 +111,38 @@ unsubscribe、菜单响应、给对应微信用户发送消、服务器端swoole
 ## swoole 和 codeigniter 结合使用
 >在codeigniter的action里面直接使用 swoole 的api，通过cli调用 swoole 的异步api  
 
-
+## mysql 重新连接 / 保持连接有效
+>当你在处理一些重量级的 PHP 操作时，如果超过了数据库的超时值， 你应该考虑在执行后续查询之前
+先调用 reconnect() 方法向数据库发送 ping 命令， 这样可以优雅的保持连接有效或者重新建立起连接。
+>mysql_ping() 检查到服务器的连接是否正常。如果断开，则自动尝试连接。本函数可用于空闲很久的脚本
+来检查服务器是否关闭了连接，如果有必要则重新连接上。如果到服务器的连接可用则 mysql_ping() 返回
+ TRUE，否则返回 FALSE。,参考[http://codeigniter.org.cn/user_guide/database/connecting.html](http://codeigniter.org.cn/user_guide/database/connecting.html)
+ 
+     面向对象风格
+     
+     bool mysqli::ping ( void )
+     过程化风格
+     
+     bool mysqli_ping ( mysqli $link )
+    
+    $this->db->reconnect();
+    /**
+     * Reconnect
+     *
+     * Keep / reestablish the db connection if no queries have been
+     * sent for a length of time exceeding the server's idle timeout
+     *
+     * @return	void
+     */
+    public function reconnect()
+    {
+        if ($this->conn_id !== FALSE && $this->conn_id->ping() === FALSE)
+        {
+            $this->conn_id = FALSE;
+        }
+    }
+    
+    
 ## 扩展阅读  
 >1. [http://mp.weixin.qq.com/wiki/home/index.html](http://mp.weixin.qq.com/wiki/home/index.html) 
 >2. [微信API开发demo](http://www.huceo.com/post/407.html)
