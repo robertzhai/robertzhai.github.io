@@ -7,7 +7,7 @@ categories: projects
 
 ## 公众号项目
 > 朋友的一个项目，我协助开发了一部分功能，主要有刷新access_token、创建菜单、subscribe、scan、
-unsubscribe、菜单响应、给对应微信用户发送消、服务器端swoole长连接和第三方socket服务通讯。
+unsubscribe、菜单响应、给对应微信用户发送消、服务器端swoole长连接和第三方socket服务实时数据通讯。
 用的lnmp+codeigniter+swoole
 
 ## 刷新access_token
@@ -40,9 +40,9 @@ unsubscribe、菜单响应、给对应微信用户发送消、服务器端swoole
 ## 设置不同的日志路径，cli和web分开
 
     if (is_cli() && !isset($_SERVER['REMOTE_ADDR'])) {
-        $config['log_path'] = '/wwwroot/logs/cli/';
+        $config['log_path'] = '/path/logs/cli/';
     } else {
-        $config['log_path'] = '/wwwroot/logs/web/';
+        $config['log_path'] = '/path/logs/web/';
     }
 
 ## cli运行
@@ -73,9 +73,47 @@ unsubscribe、菜单响应、给对应微信用户发送消、服务器端swoole
         }
 
 ## 微信服务器和开发者服务器的交互图
-![wechat_server]({{ site.url }}/assets/reading/wechat_server.jpg)  
+![wechat_server]({{ site.url }}/assets/projects/wechat_server.jpg) 
+ 
+## swoole 扩展安装
+
+    cd swoole
+    phpize
+    ./configure
+    make 
+    sudo make install
+
+## swoole socket长连接,实时推送数据
+>要设置connect、receive、error、close几个回调事件。
+
+    $client = new swoole_client(SWOOLE_SOCK_TCP, SWOOLE_SOCK_ASYNC);
+    $client->on("connect", function (swoole_client $cli) {
+        //发送注册信息，注册客户端连接
+        $cli->send($register);  
+    };
+    $client->on("receive", function (swoole_client $cli, $data) {
+    };
+    $client->on("error", function (swoole_client $cli) {
+    };
+    $client->on("close", function (swoole_client $cli) {
+        $cli->connect(Constant::PUSH_HOST, Constant::PUSH_PORT); //重连
+        log_message('error', 'socket断开后重连' . PHP_EOL);
+    };
+    //配置参数
+    $client->set(array(
+    ));
+    $client->connect(Constant::PUSH_HOST, Constant::PUSH_PORT);
+    //一分钟发一次心跳包，和socket服务器之间的心跳，如果超过一定时间没有发心跳包服务器会认
+    //为连接失效，会断开连接。, 
+    swoole_timer_tick(60 * 1000, function ($timer_id) use ($client) {
+    };
+            
+## swoole 和 codeigniter 结合使用
+>在codeigniter的action里面直接使用 swoole 的api，通过cli调用 swoole 的异步api  
 
 
 ## 扩展阅读  
 >1. [http://mp.weixin.qq.com/wiki/home/index.html](http://mp.weixin.qq.com/wiki/home/index.html) 
 >2. [微信API开发demo](http://www.huceo.com/post/407.html)
+>3. [http://codeigniter.org.cn/](http://codeigniter.org.cn/)
+>4. [http://www.swoole.com/](http://www.swoole.com/)
