@@ -154,7 +154,20 @@ categories: server
 ## 上传代码到服务器
     rsync -avr --exclude=xxx.sh  *  work@abc.host:/path/to
 
+## phpmyadmin 安装
 
+    wget https://files.phpmyadmin.net/phpMyAdmin/4.6.6/phpMyAdmin-4.6.6-all-languages.tar.gz
+    mv phpMyAdmin-4.6.6-all-languages /wwwroot/phpadmin
+    
+    nginx增加如下即可，能够访问静态资源：
+    location ~ \.(htm|html|gif|jpg|png|js|css)$ {
+       root           /wwwroot/;
+    }
+
+
+## 安装包一键下载
+[安装包](https://pan.baidu.com/s/1kVDfhv5)  
+    
 # 扩展阅读
 * [my-nginx-conf-for-wpo.html](https://imququ.com/post/my-nginx-conf-for-wpo.html)
 * [www.nginx.cn/231.html](http://www.nginx.cn/231.html)
