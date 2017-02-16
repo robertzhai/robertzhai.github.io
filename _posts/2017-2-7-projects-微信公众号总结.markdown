@@ -6,7 +6,7 @@ categories: projects
 ---
 
 ## 公众号项目
-> 朋友的一个项目，我协助开发了一部分功能，主要有刷新access_token、创建菜单、subscribe、scan、
+>一个微信公众号的项目，主要包括刷新access_token、创建菜单、subscribe、scan、
 unsubscribe、菜单响应、给对应微信用户发送消、服务器端swoole长连接和第三方socket服务实时数据通讯。
 用的lnmp+codeigniter+swoole
 
@@ -140,6 +140,21 @@ unsubscribe、菜单响应、给对应微信用户发送消、服务器端swoole
         {
             $this->conn_id = FALSE;
         }
+    }
+  
+## 脚本同一时间只能一个运行
+>cronjob
+*/2 * * * * cd /wwwroot/app; php index.php socket/pushclient push >>/wwwroot/logs/cli/push.log
+    
+    $cmd = 'ps aux | grep -i socket/Pushclient | grep -v grep | wc -l';
+    exec($cmd, $ret);
+    log_message('debug', '$ret:' . json_encode($ret));
+
+    if ($ret && intval($ret[0]) >= 3) {
+        log_message('debug', 'PushClient already running');
+        exit('PushClient already running');
+    } else {
+        log_message('error', 'PushClient not running, start');
     }
     
     
