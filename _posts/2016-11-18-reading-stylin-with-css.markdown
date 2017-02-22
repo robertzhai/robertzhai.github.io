@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "读书- << CSS设计指南 >>"
+title:  "读书- <<CSS设计指南>>"
 date:   2016-11-18 9:0:0 +0800
 categories: reading
 ---
 
-## << CSS设计指南 >>
+## <<CSS设计指南>>
 >作者个人网站[http://www.stylinwithcss.com/](http://www.stylinwithcss.com/),
 图灵翻译的书，讲解html5和css3界面布局，还有实例讲解，内容比较丰富，对响应式设计也有很独到的介绍。
 读后对css有了进一步认识。  
