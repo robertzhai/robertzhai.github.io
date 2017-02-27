@@ -6,7 +6,8 @@ categories: projects
 ---
 
 ## Resque
->是一个基于redis的异步处理消息的queue
+>是一个基于redis的异步处理消息的queue,Resque包括了producer和consumer两种角色，一个产生消息，
+一个负责异步的处理消息。
 
 ## Job
 >一个待处理的任务，比如发邮件、发短信,一个job需要有对应的job class,例如UserJob,必须要实现一个
@@ -32,7 +33,7 @@ perform方法，用户处理job的任务，job的数据通过$this->args来获�
     
 
 ## Job入队
->讲job加入到redis队列里面,比如讲UserJob加入UserJobQueue里面
+>将job加入到redis队列里面,比如将UserJob加入UserJobQueue里面
 Resque::enqueue('UserJobQueue', 'UserJob', $data, true);
 
 ## Worker
@@ -74,8 +75,8 @@ worker来监听子进程的状态，子进程处理完消息就退出，父进�
     $this->doneWorking();
 
 ## worker的启动方式
->QUEUE=redis_queue_user nohup php resque_user.php &
->QUEUE是对应消费的队列名
+>>QUEUE=redis_queue_user nohup php resque_user.php &
+>>QUEUE是对应消费的队列名
 
 ## 重启worker进程
 >ps aux | grep resque | grep -v 'grep' | awk '{print $2;}'
