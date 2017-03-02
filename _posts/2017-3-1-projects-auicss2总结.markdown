@@ -33,8 +33,57 @@ categories: projects
     </head>
     <body>
     
+    ---
+    <script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script>
+    
+        $('#cancel').click(function () {
+            history.go(-1);
+        });
+    
+        $('#edit_submit').click(function () {
+    
+            var user_name = $('#user_name').val();
+            var sex = $("input[name='sex']:checked").val()
+            var mobile = $('#mobile').val();
+            if (!mobile || !(/^1\d{10}$/.test(mobile))) {
+                alert('手机号输入错误');
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: '/user/updateaccount',
+                    // data to be added to query string:
+                    data: {user_name: user_name, sex: sex, mobile: mobile, medical_history: medical_history},
+                    // type of data we are expecting in return:
+                    dataType: 'json',
+                    timeout: 3000,
+                    context: $('body'),
+                    success: function (data) {
+                        console.log(data)
+                        if (data && data.errno == 0) {
+                            alert('修改成功')
+                            location.href = "/user/profile";
+                        } else {
+                            alert(data.errmsg ? data.errmsg : '系统异常,请稍后再试')
+                        }
+                    },
+                    error: function (xhr, type) {
+                        alert('网络不好,请稍后再试')
+                    }
+                })
+    
+            }
+        });
+    
+    </script>
     </body>
     </html>
+
+
+## ui效果图
+![aui]({{ site.url }}/assets/projects/aui01.png)  
+![aui]({{ site.url }}/assets/projects/aui02.png)  
+![aui]({{ site.url }}/assets/projects/aui03.png)  
 
    
 ## 扩展阅读 
