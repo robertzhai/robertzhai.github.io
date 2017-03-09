@@ -55,3 +55,5 @@ categories: server
     cat的变身，逆序查看文件内容
     
  
+## rsync 忽略.git 或.svn
+    rsync -avr   --exclude=.git --exclude=.svn  from to
