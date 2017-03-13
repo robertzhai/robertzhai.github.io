@@ -7,7 +7,7 @@ categories: projects
 
 ## php-ci-swoole-wechat-startup 
 # php-ci-swoole-wechat-startup
-# 微信公众号项目 php-ci-swoole-wechat
+# 微信公众号项目 php-ci-swoole-wechat(删了部分代码)
 
 **[**基于**]**
 
@@ -19,5 +19,5 @@ categories: projects
 * swoole
 * wechat api
 
-ggithub:[https://github.com/robertzhai/php-ci-swoole-wechat-startup](https://github.com/robertzhai/php-ci-swoole-wechat-startup)
+github:[https://github.com/robertzhai/php-ci-swoole-wechat-startup](https://github.com/robertzhai/php-ci-swoole-wechat-startup)
 
