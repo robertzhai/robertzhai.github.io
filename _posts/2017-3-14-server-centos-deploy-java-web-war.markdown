@@ -5,7 +5,7 @@ date:   2017-3-14 21:30:0 +0800
 categories: server
 ---
 
->今天整理了下java的web项目部署到centos服务器的步骤，方便供后续查阅。
+>整理了下java的web项目部署到centos服务器的步骤，备忘。
 
 ## spring boot 项目打war包 
 >Application.class
@@ -58,10 +58,12 @@ categories: server
 >讲war包上传到tomcat的webapps目录 /tomcat/tomcat8/webapps
 
 ## install jdk
->wget --no-cookies --no-check-certificate --header 
-"Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" 
-"http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.rpm"
->sudo rpm -ivh jdk-8u121-linux-x64.rpm
+    wget --no-cookies --no-check-certificate --header 
+    "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" 
+    "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.rpm"
+    
+    sudo rpm -ivh jdk-8u121-linux-x64.rpm
+    
 >java version
 
      $java -version
@@ -79,6 +81,7 @@ categories: server
     export CLASSPATH=.
 
 >chmod +x /etc/profile.d/java.sh; 
+
 >source /etc/profile.d/java.sh;
 
 
