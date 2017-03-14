@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "server- <<centos-deploy-java-web-war>>"
+title:  "server- <<centos-deploy-java-spring-boot-web-war>>"
 date:   2017-3-14 21:30:0 +0800
 categories: server
 ---
