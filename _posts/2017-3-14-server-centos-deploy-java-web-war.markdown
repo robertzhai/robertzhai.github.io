@@ -99,6 +99,6 @@ categories: server
 ## start tomcat
 >bin/catalina.sh start
 
-#参考
+## 参考
 
 * [https://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html](https://docs.spring.io/spring-boot/docs/current/reference/html/howto-traditional-deployment.html)
