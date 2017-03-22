@@ -7,7 +7,7 @@ categories: server
 
 >接手了个项目，需要常驻后台的cronjob，总结下常用的方法
 
-## shell，担当manager来定时检测process，如果没有run就start
+#### shell，担当manager来定时检测process，如果没有run就start
 >*/1 * * * * 1 sh check.sh
 
 
@@ -21,7 +21,7 @@ categories: server
         echo "runing....."
     fi
 
-## 进程自己检测,防重入，同一时间只一个进程 run
+#### 进程自己检测,防重入，同一时间只一个进程 run
 
 >*/1 * * * * 1 start_process_command
 
@@ -37,6 +37,6 @@ categories: server
     }
     
    
-## python的 Supervisor
+#### python的 Supervisor
 >[http://supervisord.org/](http://supervisord.org/)
 
