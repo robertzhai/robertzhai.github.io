@@ -21,7 +21,7 @@ categories: server
         echo "runing....."
     fi
 
-## 进程自己检测,防重入，同一时间只一个进程正真运行
+## 进程自己检测,防重入，同一时间只一个进程 run
 
 >*/1 * * * * 1 start_process_command
 
