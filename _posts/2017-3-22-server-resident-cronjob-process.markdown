@@ -7,9 +7,8 @@ categories: server
 
 >接手了个项目，需要常驻后台的cronjob，总结下常用的方法
 
-#### shell，担当manager来定时检测process，如果没有run就start
+#### manager来定时检测process，如果没有run就start一个process后台运行
 >*/1 * * * * 1 sh check.sh
-
 
     #!/bin/bash
     
@@ -20,7 +19,15 @@ categories: server
     else
         echo "runing....."
     fi
-
+    
+>*/1 * * * * 1 php /path/to/manager.php
+    
+    <?php
+    ...省略检测
+    $cmd = "/path/to/cmd $args &";
+    echo $cmd . ' running ';
+    popen($cmd, "r");
+        
 #### 进程自己检测,防重入，同一时间只一个进程 run
 
 >*/1 * * * * 1 start_process_command
