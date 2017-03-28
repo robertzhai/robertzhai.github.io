@@ -23,6 +23,11 @@ categories: projects
 
 * [https://github.com/robertzhai/php-yii2-hui-cms-boilplate](https://github.com/robertzhai/php-yii2-hui-cms-boilplate)
 
+## gii usage
+![crud]({{ site.url }}/assets/projects/yii01.png)  
+![module]({{ site.url }}/assets/projects/yii02.png)  
+
+
 ## 参考
 
 * [http://www.h-ui.net/index.shtml](http://www.h-ui.net/index.shtml)
