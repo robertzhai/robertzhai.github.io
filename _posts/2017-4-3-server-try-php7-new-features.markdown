@@ -32,6 +32,7 @@ categories: server
 ## strict_types
 >在脚本开头如果申明strict_types=1，就回对参数进行严格检查，如int传float会报错，不申明的话会
 进行强制转换。
+>declare(strict_types=1);
 
 ## 测试用例
 
