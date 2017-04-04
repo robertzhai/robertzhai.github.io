@@ -28,6 +28,12 @@ categories: server
     --with-jpeg-dir=/usr/lib --with-png-dir=/usr/lib \
     --with-freetype-dir=/usr/lib
 
+## php7 version
+
+    /usr/local/php7/bin/php -v
+    PHP 7.1.3 (cli) ( NTS )
+    Copyright (c) 1997-2017 The PHP Group
+    Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
 
 ## strict_types
 >在脚本开头如果申明strict_types=1，就回对参数进行严格检查，如int传float会报错，不申明的话会
