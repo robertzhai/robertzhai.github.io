@@ -81,6 +81,7 @@ categories: server
     var_dump(robert_ip2long('127.255.255.255'));
     var_dump(robert_ip2long('027.255.255.255'));
     var_dump(robert_ip2long('255.255.255.255'));
+    var_dump(robert_ip2long('0255.255.255.255'));
 
     output:
     int(2147483647)
