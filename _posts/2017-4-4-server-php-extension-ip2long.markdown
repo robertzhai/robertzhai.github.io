@@ -54,10 +54,10 @@ categories: server
     	if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &ip, &ip_len) == FAILURE) {
     	    return;
     	}
-    //	php_printf("input_ip=:%s", ip);
+        //	php_printf("input_ip=:%s", ip);
     	sscanf(ip, "%d.%d.%d.%d", &ip1, &ip2, &ip3, &ip4);
-    //	php_printf("%d.%d.%d.%d", ip1, ip2,ip3,ip4);
-    //	result = (((ip1 * 255) + ip2) * 255 + ip3) * 255 + ip4;
+        //	php_printf("%d.%d.%d.%d", ip1, ip2,ip3,ip4);
+        //	result = (((ip1 * 255) + ip2) * 255 + ip3) * 255 + ip4;
     	result =  (ip1 << 24) | ( ip2 << 16) | ( ip3 << 8 ) | ip4;
     	RETURN_LONG(result);
     
@@ -88,6 +88,10 @@ categories: server
     int(4294967295)
     int(4294967295)
 
+
+## 段错误调试方法
+>ulimit -c unlimited
+>gdb php -c core.15151
    
 
 ## github
@@ -98,5 +102,5 @@ categories: server
 ## 参考
 
 * [http://www.cnblogs.com/iblaze/archive/2013/06/02/3112603.html](http://www.cnblogs.com/iblaze/archive/2013/06/02/3112603.html)
-
+* [如何调试PHP的Core之获取基本信息](http://www.laruence.com/2011/06/23/2057.html)
    
