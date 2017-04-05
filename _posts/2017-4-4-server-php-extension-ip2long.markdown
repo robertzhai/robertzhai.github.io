@@ -103,4 +103,4 @@ categories: server
 
 * [http://www.cnblogs.com/iblaze/archive/2013/06/02/3112603.html](http://www.cnblogs.com/iblaze/archive/2013/06/02/3112603.html)
 * [如何调试PHP的Core之获取基本信息](http://www.laruence.com/2011/06/23/2057.html)
-   
+* [PHP ip2long() 回传值为负数 的 解法](http://www.hksilicon.com/articles/4155?lang=cn)
