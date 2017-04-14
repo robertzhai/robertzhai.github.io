@@ -88,7 +88,12 @@ categories: server
     };
     
     var_dump($class->getData());
+ 
     
+
+## php7 vs php5.6 phpmyadmin测试
+>php5.6平均214ms
+>php7平级188ms,快了近26ms,提速12%
 
 ## 网盘
 
