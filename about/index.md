@@ -10,20 +10,12 @@ permalink: /about/index.html
 如转载此博文章，请附上此博地址。
 
 # 个人介绍
->我个人网名 robertzhai,  从事IT行业, 目前就职百度，做研发相关的工作，资深后端，业余前端和设计，欢迎和大家学习交流心得。
-以前的博客在 csdn [http://blog.csdn.net/robert198837](http://blog.csdn.net/robert198837), 后续打算用jekyll在github上发布 。 
-目前正在努力学习前端、android开发和项目管理相关方面。
-Stay Hungry, Stay Foolish 。
+>我个人网名 robertzhai,  从事IT行业多年, 目前就职百度，做web和app研发相关的工作，业余前端和设计，
+欢迎和大家学习交流心得。精通php相关的项目开发，熟悉java相关的开发，擅长服务器配置和架构设计。
+
 
 # 爱好  
->跑步、音乐、电影、羽毛球、读书  
+>跑步、音乐、电影、羽毛球、读书 、爬山 
 
 # 邮箱
 >[robertzhai131@163.com](mailto:robertzhai131@163.com)
-
-# 微博
->[http://weibo.com/319688805](http://weibo.com/319688805)
-
-# 简书  
->[http://www.jianshu.com/p/1f471d8d7921](http://www.jianshu.com/p/1f471d8d7921)
-

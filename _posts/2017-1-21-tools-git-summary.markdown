@@ -111,6 +111,9 @@ categories: tools
 
     git checkout file
 	
+20.git忽略已经被提交的文件
+
+    git update-index --assume-unchanged file
 
 ## 扩展阅读
 * [https://git-scm.com/book/zh/v1](https://git-scm.com/book/zh/v1)  
