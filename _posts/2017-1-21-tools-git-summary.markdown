@@ -115,6 +115,14 @@ categories: tools
 
     git update-index --assume-unchanged file
 
+21.图形界面看日志 visual tools gitk 
+    
+    gitk
+ 
+22.图形界面提交git gui
+    
+    git gui
+    
 ## 扩展阅读
 * [https://git-scm.com/book/zh/v1](https://git-scm.com/book/zh/v1)  
 * [git 权威指南](https://pan.baidu.com/s/1kV5COab)
