@@ -17,7 +17,14 @@ categories: tools
 看结果，具体参考：[http://jmeter.apache.org/usermanual/build-web-test-plan.html](http://jmeter.apache.org/usermanual/build-web-test-plan.html)
 
 
-## sample time 和 Latency
+## result info
+
+    Sample time is the number of milliseconds in which the server served the complete request.
+     Status is the status of the request. It can be either a success, warning, or error. 
+     Bytes is the number of bytes received for the request. 
+     Latency is the number of milliseconds in which JMeter received the initial response from the server
+    
+## sample time 和 Latency    
 >Latency is a difference between time when request was sent and time when response has started to be received.
 >Response time (= Sample time = Load time = Elapsed time) is a difference between time when request was sent and 
 time when response has been fully received.
