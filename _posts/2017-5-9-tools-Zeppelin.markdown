@@ -25,10 +25,16 @@ categories: tools
 ![zep00]({{ site.url }}/assets/tools/zep01.png)
 ![zep00]({{ site.url }}/assets/tools/zep00.png)
 
->2.添加note pv_uv_report,指定jdbc为interpreter
+>2.添加notebook pv_uv_report,指定jdbc为interpreter
 ![zep00]({{ site.url }}/assets/tools/zep03.png)
 
 >3.jdbc查询pv、uv 图表展示
 ![zep00]({{ site.url }}/assets/tools/zep04.png)
 ![zep00]({{ site.url }}/assets/tools/zep05.png)
 ![zep00]({{ site.url }}/assets/tools/zep06.png)
+
+
+
+## 参考
+* [http://xiaqianlin.cn/?p=635](http://xiaqianlin.cn/?p=635)
+* [https://zeppelin.apache.org](https://zeppelin.apache.org)
