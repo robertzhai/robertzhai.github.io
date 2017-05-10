@@ -35,9 +35,9 @@ categories: tools
 
 
 ## 其它interpreter
->python -> %python
->shell -> %sh
->markdown -> %md
+>python -> %python  
+>shell -> %sh  
+>markdown -> %md  
 
 
 ## 参考
