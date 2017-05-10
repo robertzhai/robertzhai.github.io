@@ -22,17 +22,22 @@ categories: tools
 
 ## JDBC连接MySQL分析数据
 >1.修改 jdbc interpreter
-![zep00]({{ site.url }}/assets/tools/zep01.png)
-![zep00]({{ site.url }}/assets/tools/zep00.png)
+![zep]({{ site.url }}/assets/tools/zep01.png)
+![zep]({{ site.url }}/assets/tools/zep00.png)
 
 >2.添加notebook pv_uv_report,指定jdbc为interpreter
-![zep00]({{ site.url }}/assets/tools/zep03.png)
+![zep]({{ site.url }}/assets/tools/zep03.png)
 
 >3.jdbc查询pv、uv 图表展示
-![zep00]({{ site.url }}/assets/tools/zep04.png)
-![zep00]({{ site.url }}/assets/tools/zep05.png)
-![zep00]({{ site.url }}/assets/tools/zep06.png)
+![zep]({{ site.url }}/assets/tools/zep04.png)
+![zep]({{ site.url }}/assets/tools/zep05.png)
+![zep]({{ site.url }}/assets/tools/zep06.png)
 
+
+## 其它interpreter
+>python -> %python
+>shell -> %sh
+>markdown -> %md
 
 
 ## 参考
