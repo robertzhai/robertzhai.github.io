@@ -22,8 +22,8 @@ categories: tools
 
 ## JDBC连接MySQL分析数据
 >1.修改 jdbc interpreter
-![zep00]({{ site.url }}/assets/tools/zep00.png)
 ![zep00]({{ site.url }}/assets/tools/zep01.png)
+![zep00]({{ site.url }}/assets/tools/zep00.png)
 
 >2.添加note pv_uv_report,指定jdbc为interpreter
 ![zep00]({{ site.url }}/assets/tools/zep03.png)
