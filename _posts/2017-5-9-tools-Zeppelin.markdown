@@ -41,10 +41,14 @@ markdown -> %md
 
 ## 加入自己的interpreter
 ### install MongoDB interpreter
->插入
+
+>插入  
+
     %mongodb
     db.test.blog.insert({"msg":"this is a error msg"})
+
 >查询
+
     %mongodb
     db.test.blog.find().table()
 
