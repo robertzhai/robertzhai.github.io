@@ -39,7 +39,7 @@ shell -> %sh
 markdown -> %md  
 
 
-## 加入自己的分析模块
+## 加入自己的interpreter
 ### install MongoDB interpreter
 >插入
     %mongodb
