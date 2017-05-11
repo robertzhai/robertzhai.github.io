@@ -33,13 +33,26 @@ categories: tools
 ![zep]({{ site.url }}/assets/tools/zep05.png)
 ![zep]({{ site.url }}/assets/tools/zep06.png)
 
+>其它interpreter
+python -> %python  
+shell -> %sh  
+markdown -> %md  
 
-## 其它interpreter
->python -> %python  
->shell -> %sh  
->markdown -> %md  
+
+## 加入自己的分析模块
+### install MongoDB interpreter
+>插入
+    %mongodb
+    db.test.blog.insert({"msg":"this is a error msg"})
+>查询
+    %mongodb
+    db.test.blog.find().table()
 
 
+## 加入自己的可视化模块
+    .....
+    
 ## 参考
 * [http://xiaqianlin.cn/?p=635](http://xiaqianlin.cn/?p=635)
 * [https://zeppelin.apache.org](https://zeppelin.apache.org)
+* [https://github.com/bbonnin/zeppelin-mongodb-interpreter](https://github.com/bbonnin/zeppelin-mongodb-interpreter)
