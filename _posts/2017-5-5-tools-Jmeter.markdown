@@ -34,6 +34,10 @@ time when response has been fully received.
 ![jmeter.png]({{ site.url }}/assets/tools/jmeter.png)
 ![jmeter01.png]({{ site.url }}/assets/tools/jmeter01.png)
 
+##  断言
+>正则表达式匹配比较常用，多个用 | 分割，表示或关系
+![jmeter.png]({{ site.url }}/assets/tools/jmeter03.png)
+
 
 ## 参考
 * [http://jmeter.apache.org/index.html](http://jmeter.apache.org/index.html)
