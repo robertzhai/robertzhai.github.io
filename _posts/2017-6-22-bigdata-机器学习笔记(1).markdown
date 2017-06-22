@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "bigdata-机器学习笔记(1)"
+date:   2017-6-21 20:30:0 +0800
+categories: bigdata
+---
+
+
+# install pyenv
+brew install pyenv
+
+# install pyenv-virtualenv
+brew install pyenv-virtualenv
+
+# 安装python virtualenv  3.6.1 环境
+	pyenv install 3.6.1  
+	pyenv virtualenv 3.6.1 python-virenv-3.6.1
+
+~/.bash_profile 最后增加下面2行
+  
+	eval "$(pyenv init -)"
+	eval "$(pyenv virtualenv-init -)"
+
+然后
+source ~/.bash_profile
+ 
+
+# 查看所有的virtualenv
+pyenv virtualenvs
+
+# 激活virtualenv
+pyenv activate python-vir-3.6.1
+
+# pip 安装指定版本
+	sudo pip install 'NumPy=1.9.1'  
+	sudo pip install 'NumPy==1.9.1'
+	sudo pip install 'SciPy==0.14.0'
+	sudo pip install 'scikit-learn==0.15.2'
+	sudo pip install 'matplotlib==1.4.0'
+	sudo pip install 'pandas==0.15.2'
+
+#matplotlib安装成功,使用import matplotlib.pyplot as plt报错
+
+	在Mac OS X的图像渲染后端,默认使用的是cocoa的API.这里我们需要自己设置为TkAgg.
+
+	cd .matplotlib/
+	创建一个文件命名为:matplotlibrc,并添加内容:backend: TkAgg
+
+
+# virtualenv  ipython 进入不是python3而是python2.7
+	
+	hash -r # purge shell's PATH, though this may not be necessary for you
+	
+	
+	
+# 参考
+* [virtualenv](http://dont-be-afraid-to-commit.readthedocs.io/en/latest/virtualenv.html)
+* [Scipy Lecture Notes](http://www.scipy-lectures.org/index.html)
