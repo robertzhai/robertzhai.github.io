@@ -100,3 +100,9 @@ categories: bigdata
     1	tes
     1	def
     1	abc
+    
+# 查看job
+    yarn application -list
+    
+# kill job
+    yarn application -kill $ApplicationId

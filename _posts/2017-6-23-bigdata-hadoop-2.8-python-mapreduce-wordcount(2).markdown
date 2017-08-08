@@ -56,7 +56,10 @@ categories: bigdata
         print("{}\t{}".format(current_word, word_count))
     if __name__ == "__main__":  
       main()
+ 
       
+# pipe test map reduce
+    echo "test a b c abc \ndef a h" | python python/map.py | sort -k1|  python python/reduce.py
 # streaming 提交运行 job 
 
     bin/hadoop jar share/hadoop/tools/lib/hadoop-streaming-2.8.0.jar \
