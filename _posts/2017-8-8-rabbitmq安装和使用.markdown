@@ -2,8 +2,17 @@
 layout: post
 title:  "rabbitmq安装和使用"
 date:   2017-8-8 20:30:0 +0800
-categories: server
+categories: projects
 ---
+
+# rabbitmq AMQP 模型
+    消息（message）被发布者（publisher）发送给交换机（exchange），交换机常常被比喻成邮局或者邮箱。
+    然后交换机将收到的消息根据路由规则分发给绑定的队列（queue）。
+    最后AMQP代理会将消息投递给订阅了此队列的消费者，或者消费者按照需求自行获取。
+    
+    publisher->exchange->router->queue->consumer
+    
+![routing.png]({{ site.url }}/assets/projects/routing.png)
 
 
 # 安装
@@ -29,11 +38,11 @@ categories: server
         private static $queue_instance;
     
         //交换机名
-        const EXCHANGE_NAME = 'sugar.xiaotangyi.durable';
+        const EXCHANGE_NAME = 'app.rabbitmq.durable';
         //路由key
         const KEY_ROUTE = 'usertestdata';
     
-        const QUEUE_NAME = 'worker.xiaotangyi';
+        const QUEUE_NAME = 'worker.rabbitmq';
     
         public function __construct($conn_args)
         {
@@ -144,7 +153,10 @@ categories: server
         }
     }
  
+ 
     
+
+
 # 参考
 
 * [RabbitMQ 中文文档－PHP版](https://rabbitmq.shujuwajue.com/) 
