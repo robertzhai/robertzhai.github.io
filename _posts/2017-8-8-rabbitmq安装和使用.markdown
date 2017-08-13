@@ -153,10 +153,25 @@ categories: projects
         }
     }
  
- 
+
+# check-rabbiqmq.sh
+
+
+    echo "start check ... ";
     
-
-
+    ps -fe|grep '/etc/init.d/rabbitmq-server' |grep -v grep
+    if [ $? -ne 0 ]
+    then
+    echo "start process....."
+    /etc/init.d/rabbitmq-server start
+    sleep 10
+    else
+    echo "runing....."
+    fi
+    
+    
+    echo "check succ";
+    
 # 参考
 
 * [RabbitMQ 中文文档－PHP版](https://rabbitmq.shujuwajue.com/) 
