@@ -122,6 +122,13 @@ categories: tools
 22.图形界面提交git gui
     
     git gui
+ 
+23. git  储藏（Stashing）   
+    
+    git stash
+    git stash list
+    git stash apply
+    
     
 ## 扩展阅读
 * [https://git-scm.com/book/zh/v1](https://git-scm.com/book/zh/v1)  
