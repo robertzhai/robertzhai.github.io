@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "bigdata-机器学习笔记(2)"
+date:   2017-9-9 20:30:0 +0800
+categories: bigdata
+---
+
+intro：
+* [我是如何花了一年时间来学机器学习的](http://www.techug.com/post/how-i-learn-machine-learning-in-a-year.html)
+* [machine-learning-in-a-week](https://medium.com/learning-new-stuff/machine-learning-in-a-week-a0da25d59850)
+* [welcome to machine learning ](https://classroom.udacity.com/courses/ud120/lessons/2410328539/concepts/30096788840923)
+
+机器学习是监督学习和非监督学习，让机器去做分类，python库scklearn。
+	
+naive bayes：
+* [naive bayes](https://classroom.udacity.com/courses/ud120/lessons/2254358555/concepts/30137086860923)
+
+高斯朴素贝叶斯,朴素贝叶斯,归一化
+* [sklearn.naive_bayes.GaussianNB](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html#sklearn.naive_bayes.GaussianNB.score)
+
+svm：
+* [svm](https://classroom.udacity.com/courses/ud120/lessons/2252188570/concepts/23799685490923)
+
+
