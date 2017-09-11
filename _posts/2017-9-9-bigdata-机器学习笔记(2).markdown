@@ -5,20 +5,72 @@ date:   2017-9-9 20:30:0 +0800
 categories: bigdata
 ---
 
+机器学习是对原始数据数据(train_feature->train_label)运用算法训练生成模型，来预测新的数据(test_feature)，
+python的scklearn包含了很多算法。
+
+步骤：
+导入sklearn模块->选择分类器->创建分类器->拟合分类器->用拟合的分类器进行预测
+->评估模型的准确率->选择分类器，如此循环。
+
 intro：
 * [我是如何花了一年时间来学机器学习的](http://www.techug.com/post/how-i-learn-machine-learning-in-a-year.html)
 * [machine-learning-in-a-week](https://medium.com/learning-new-stuff/machine-learning-in-a-week-a0da25d59850)
 * [welcome to machine learning ](https://classroom.udacity.com/courses/ud120/lessons/2410328539/concepts/30096788840923)
 
-机器学习是监督学习和非监督学习，让机器去做分类，python库scklearn。
 	
 naive bayes：
 * [naive bayes](https://classroom.udacity.com/courses/ud120/lessons/2254358555/concepts/30137086860923)
 
-高斯朴素贝叶斯,朴素贝叶斯,归一化
+    高斯朴素贝叶斯,朴素贝叶斯,归一化
 * [sklearn.naive_bayes.GaussianNB](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html#sklearn.naive_bayes.GaussianNB.score)
 
+    from sklearn.naive_bayes import GaussianNB
+    clf = GaussianNB()
+    clf.fit(X, Y)
+    clf.predict(test_feature)
+
 svm：
-* [svm](https://classroom.udacity.com/courses/ud120/lessons/2252188570/concepts/23799685490923)
+* [svm video](https://classroom.udacity.com/courses/ud120/lessons/2252188570/concepts/23799685490923)
+* [modules svm ](http://scikit-learn.org/stable/modules/svm.html)
+
+    from sklearn import svm
+    clf = svm.SVC()
+    clf.fit(X, y) 
+    clf.predict(test_feature)
+
+    
+    kernel:The kernel function can be any of the following:
+        linear: \langle x, x'\rangle.
+        polynomial: (\gamma \langle x, x'\rangle + r)^d. d is specified by keyword degree, r by coef0.
+        rbf: \exp(-\gamma \|x-x'\|^2). \gamma is specified by keyword gamma, must be greater than 0.
+        sigmoid (\tanh(\gamma \langle x,x'\rangle + r)), where r is specified by coef0.
+
+    You can define your own kernels by either giving the kernel as a python function or by precomputing the Gram matrix.
+    
+    避免过度拟合->调节参数
+    训练数据太大，svm会比较慢，数据有噪声，会出现过度拟合
+
+decision trees:
+
+    根据训练数据找出决策边界
+    from sklearn import tree
+    clf = tree.DecisionTreeClassifier()
+    clf = clf.fit(X, Y)
+    clf.predict(test_feature)
+    
+* [modules tree](http://scikit-learn.org/stable/modules/tree.html)
+
+k nearest neighbors 
+
+    >>> X = [[0], [1], [2], [3]]
+    >>> y = [0, 0, 1, 1]
+    >>> from sklearn.neighbors import KNeighborsClassifier
+    >>> neigh = KNeighborsClassifier(n_neighbors=3)
+    >>> neigh.fit(X, y) 
+
+* [KNeighborsClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)
+
+adaboost
 
 
+random forest
