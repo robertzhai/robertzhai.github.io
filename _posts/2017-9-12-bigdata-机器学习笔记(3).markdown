@@ -1,0 +1,69 @@
+---
+layout: post
+title:  "bigdata-机器学习笔记(3)"
+date:   2017-9-12 20:30:0 +0800
+categories: bigdata
+---
+
+regression 回归:
+
+最小化误差平方和
+
+* 最小二乘法
+* 梯度下降法
+
+    根据训练数据找出决策边界
+    from sklearn import tree
+    clf = tree.DecisionTreeClassifier()
+    clf = clf.fit(X, Y)
+    clf.predict(test_feature)
+    
+* [modules tree](http://scikit-learn.org/stable/modules/tree.html)
+
+
+outliers 异常值:
+
+* outlier detection
+    train->remove(reduce data set,去除最大误差值的点)->train again 如此可以多次重复
+   
+
+clustering 聚类(unsupervised learning)
+
+* 降纬(高纬降低纬）
+* k-means(k均值)
+
+feature scaling(特征缩放)
+
+
+* sklearn.preprocessing.MinMaxScaler formula: (sourceData - sourceDataMin)/(sourceDataMax-sourceDataMin)
+* 数据的新值范围(0-1)
+* http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html
+* [module sklearn.preprocessing.MinMaxScaler](http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html)
+
+    >>> from sklearn.preprocessing import MinMaxScaler
+    >>>
+    >>> data = [[-1, 2], [-0.5, 6], [0, 10], [1, 18]]
+    >>> scaler = MinMaxScaler()
+    >>> print(scaler.fit(data))
+    MinMaxScaler(copy=True, feature_range=(0, 1))
+    >>> print(scaler.data_max_)
+    [  1.  18.]
+    >>> print(scaler.transform(data))
+    [[ 0.    0.  ]
+     [ 0.25  0.25]
+     [ 0.5   0.5 ]
+     [ 1.    1.  ]]
+    >>> print(scaler.transform([[2, 2]]))
+    [[ 1.5  0. ]]
+    
+    
+Text Learning
+
+
+feature selection
+
+PCA
+
+Cross Validation
+
+
