@@ -11,7 +11,7 @@ coreseek 是 sphinx的支持中文版的改造版本，对中文支持，可以�
 # coreseek下载
 > wget http://pppboy.com/wp-content/uploads/2016/02/coreseek-3.2.14.tar.gz,或者直接
 
-![点击下载,coreseek-3.2.14.tar.gz]({{ site.url }}/assets/search/coreseek-3.2.14.tar.gz)
+[点击下载,coreseek-3.2.14.tar.gz]({{ site.url }}/assets/search/coreseek-3.2.14.tar.gz)
 
 # 安装 mmseg3
     tar zxvf coreseek-3.2.14.tar.gz
