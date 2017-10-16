@@ -23,29 +23,29 @@ categories: bigdata
      
 ## start php ml lib
     
-   下载依赖
-   composer require php-ai/php-ml
-   
-   <?php
-   require_once 'vendor/autoload.php';
-   
-   use Phpml\Classification\KNearestNeighbors;
-   
-   $samples = [[1, 3], [1, 4], [2, 4], [3, 1], [4, 1], [4, 2]];
-   $labels = ['a', 'a', 'a', 'b', 'b', 'b'];
-   
-   $classifier = new KNearestNeighbors();
-   $classifier->train($samples, $labels);
-   
-   echo $classifier->predict([3, 2]);
-   
-   上面是KNN算法的例子，输出：
-   b
+    下载依赖
+    composer require php-ai/php-ml  
     
+    <?php
+    require_once 'vendor/autoload.php';
+    
+    use Phpml\Classification\KNearestNeighbors;
+    
+    $samples = [[1, 3], [1, 4], [2, 4], [3, 1], [4, 1], [4, 2]];
+    $labels = ['a', 'a', 'a', 'b', 'b', 'b'];
+    
+    $classifier = new KNearestNeighbors();
+    $classifier->train($samples, $labels);
+    
+    echo $classifier->predict([3, 2]);
+    
+    上面是KNN算法的例子，输出：
+    b
+
 
 
 
 # 参考
 
-* [https://www.leocode.net/article/index/26.html）](https://www.leocode.net/article/index/26.html)
+* [https://www.leocode.net/article/index/26.html](https://www.leocode.net/article/index/26.html)
 * [https://github.com/php-ai/php-ml](https://github.com/php-ai/php-ml)
