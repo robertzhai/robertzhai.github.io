@@ -11,7 +11,7 @@ permalink: /about/index.html
 
 
 # 个人介绍
->我个人网名 robertzhai,  从事IT行业多年, 目前就职百度，做web和app研发相关的工作，业余前端和设计，
+>我个人网名 robertzhai,  从事IT行业多年, 做web和app研发相关的工作，业余前端和设计，
 欢迎和大家学习交流心得。精通php相关的项目开发，熟悉java web、js，擅长服务器配置和架构设计。
 
 # 联系方式
