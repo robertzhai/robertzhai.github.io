@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "读书-<<大忙人枕边书>>和<<跃迁>>"
+date:   2018-1-11 20:0:0 +0800
+categories: reading
+---
+
+## <<大忙人枕边书>>    
+>讲压力缓解和心理调整的。
+下载地址：[网盘](https://pan.baidu.com/s/1gfCPFsJ)。
+![大忙人枕边书]({{ site.url }}/assets/reading/damangren.png)
+    
+    
+
+
+## <<跃迁>>    
+>讲新时代如何调整学习方式，跟上时代；成为高手的途径,特别推荐一看。
+下载地址：[网盘](https://pan.baidu.com/s/1i5D1zIP)。    
+![跃迁]({{ site.url }}/assets/reading/yueqian.png)
