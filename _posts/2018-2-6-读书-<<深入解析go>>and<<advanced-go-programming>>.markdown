@@ -20,8 +20,9 @@ categories: reading
 >go web框架
 
 ## 2本看的感觉比较好的书。    
->深入解析go下载地址：[深入解析go](https://pan.baidu.com/s/1mjrySNe)
->advanced-go-programming下载地址：[advanced-go-programming](https://pan.baidu.com/s/1jKd6dYA)    
+>深入解析go下载地址：[深入解析go](https://pan.baidu.com/s/1mjrySNe)  
+>advanced-go-programming下载地址：[advanced-go-programming](https://pan.baidu.com/s/1jKd6dYA)      
+
 部分书中例子代码见[https://github.com/robertzhai/go/tree/master/advanced](https://github.com/robertzhai/go/tree/master/advanced)
 
  参考
