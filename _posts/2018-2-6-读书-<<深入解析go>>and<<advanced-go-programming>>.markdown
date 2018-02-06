@@ -12,6 +12,12 @@ categories: reading
     export GOROOT=/usr/local/opt/go/libexec
     export GOPATH=/wwwroot/gopath
     export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+    #sublime config,安装插件 GoSublime
+    {
+        "PATH": "/usr/local/opt/go/libexec/bin",
+        "GOPATH": "/wwwroot/gopath"
+    }
+    
     
 >go是编译型的带垃圾回收的高级语言
 >垃圾回收，三色标记法
