@@ -17,6 +17,9 @@ categories: reading
 >垃圾回收，三色标记法
 >goroutine调度，M、 P、 G 三种角色的关系
 >go内存模型
+>组合来实现面向对象,struct
+>不要通过共享内存来通信，而应该通过通信来共享内存; channel
+>sync 读写锁
 >go web框架
 
 ## 2本看的感觉比较好的书。    
@@ -25,6 +28,14 @@ categories: reading
 
 部分书中例子代码见[https://github.com/robertzhai/go/tree/master/advanced](https://github.com/robertzhai/go/tree/master/advanced)
 
+# go runtime
+![Go-runtime]({{ site.url }}/assets/reading/Go-runtime-Page-1-1.png)
+
+# go sched
+![go-sched]({{ site.url }}/assets/reading/go-sched-Page-1.png)
+
+
  参考
 
 * [https://golang.org/ref/mem](https://golang.org/ref/mem)
+* [https://povilasv.me/go-scheduler/](https://povilasv.me/go-scheduler/)
