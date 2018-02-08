@@ -12,3 +12,5 @@ categories: server
 完整图请点击：[https://robertzhai.github.io/assets/server/gcc_static_shared_lib.png](https://robertzhai.github.io/assets/server/gcc_static_shared_lib.png)
 
 pdf 下载：[https://pan.baidu.com/s/1nwUC95Z](https://pan.baidu.com/s/1nwUC95Z)
+
+xmind:[https://pan.baidu.com/s/1pMe1Eqf](https://pan.baidu.com/s/1pMe1Eqf)
