@@ -7,4 +7,9 @@ categories: server
 
 # 总结和整理 
 
+
 ![gcc_static_shared_lib]({{ site.url }}/assets/server/gcc_static_shared_lib.png)
+
+完整图请点击：[https://robertzhai.github.io/assets/server/gcc_static_shared_lib.png](https://robertzhai.github.io/assets/server/gcc_static_shared_lib.png)
+
+pdf 下载：[https://pan.baidu.com/s/1nwUC95Z](https://pan.baidu.com/s/1nwUC95Z)
