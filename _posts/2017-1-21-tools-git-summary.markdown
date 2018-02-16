@@ -42,7 +42,7 @@ categories: tools
 	expect "Username for 'https://github.com':"
 	send "robertzhai\r"
 	expect "Password for 'https://robertzhai@github.com':"
-	send "robert2014\r"
+	send "xxxxx\r"
 	expect eof%
 	
 6.推动本地仓库到远程仓库
