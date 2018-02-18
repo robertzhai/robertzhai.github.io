@@ -6,7 +6,7 @@ categories: sourcestudy
 ---
 
 # Web Bench
-
+    
     一个用c语言写的服务端压测工具.
     Web Bench is very simple tool for benchmarking WWW or proxy servers. 
     Uses fork() for simulating multiple clients and can use HTTP/0.9-HTTP/1.1 requests. 
