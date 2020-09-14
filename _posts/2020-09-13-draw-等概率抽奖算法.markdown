@@ -1,0 +1,67 @@
+### 实现一个等概率抽奖算法，每个奖品被抽中概率相等
+>如3样奖品数量是 p1:100，p2:200，p3:200，总共 total=p1+p2+p3=600
+>下面的算法实现了，p1,p2,p3被抽中的概率都是1/5,2/5,2/5,每个奖品被抽中概率是1/500
+>对p1来说概率是:100/500=1/5 ,p2来说是 400/500*(200/400)=2/5,p3来说是 400/500*(200/400)=2/5  
+
+
+###go 实现
+
+
+``` 
+type Prize struct {
+    Enname   string `json:"enname"`
+    Zhname   string `json:"zhname"`
+    Stock    int64  `json:"stock"`
+    Icon_url string `json:"icon_url"`
+}
+
+type PrizeList []Prize
+
+func (plist PrizeList) Len() int {
+    return len(plist)
+}
+
+// 根据Stock降序
+func (plist PrizeList) Less(i, j int) bool {
+    return plist[i].Stock > plist[j].Stock
+}
+
+// 交换数据
+func (plist PrizeList) Swap(i, j int) {
+    plist[i], plist[j] = plist[j], plist[i]
+}
+
+func init() {
+    rand.Seed(time.Now().UnixNano())
+}
+
+//UserDraw ，返回抽中的奖品
+func UserDraw(ctx context.Context, prizeList []entity.Prize) (*entity.Prize) {
+
+
+    var total int64 = 0
+    prizeLen := len(prizeList)
+    //获取总数
+    for _, prize := range prizeList {
+        total += prize.Stock
+    }
+    if total == 0 {
+        return nil
+    }
+
+    for i := 0; i < prizeLen; i++ {
+        //获取 0-总数  [0,total)
+        randomNum := rand.Int63n(total)
+        curStock := prizeList[i].Stock
+        //如果在当前的概率范围内,得到的就是当前概率
+        if randomNum < curStock {
+            return &prizeList[i]
+        } else {
+            //否则减去当前的概率范围,进入下一轮循环
+            total -= curStock
+        }
+    }
+    return nil
+}
+``` 
+
